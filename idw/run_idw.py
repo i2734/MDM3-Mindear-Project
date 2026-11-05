@@ -39,7 +39,7 @@ for name, scenario in SCENARIOS.items():
             for s in SEEDS:
                 data = prepared[s][(count, layout)]
                 pred = idw(data["phone_positions"], data["phone_levels"],
-                           data["query_positions"], p=4)
+                           data["query_positions"], p=2, k=4)
                 diff = pred - data["true_levels"]
                 rmse.append(np.sqrt(np.mean(diff ** 2)))
                 mae.append(np.mean(np.abs(diff)))
@@ -48,7 +48,7 @@ for name, scenario in SCENARIOS.items():
 
     # Figure: truth vs prediction (100 grid phones, time step 0)
     data = prepared[SEEDS[0]][(100, "grid")]
-    pred = idw(data["phone_positions"], data["phone_levels"], data["query_positions"], p=4)
+    pred = idw(data["phone_positions"], data["phone_levels"], data["query_positions"], p=2, k=4)
     shape = (len(y), len(x))
     extent = [x.min(), x.max(), y.min(), y.max()]
 

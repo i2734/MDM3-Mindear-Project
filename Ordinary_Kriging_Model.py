@@ -52,6 +52,10 @@ class ExactAcousticKriging:
         else:
             eff_range = self.practical_range
 
+        #Ensure 2D shape (T, N) even if T=1
+        if phone_levels.ndim == 1:
+            phone_levels = phone_levels[np.newaxis, :]
+
         #Transform known dB levels to linear energy domain as to avoid bias from dB averaging
         linear_energy = 10.0 ** (phone_levels / 10.0)  # (T, N)
 

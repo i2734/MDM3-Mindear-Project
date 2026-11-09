@@ -119,6 +119,6 @@ class ExactAcousticKriging:
             # Normalized standard deviation: 0.0 at phone coordinates, approaching 1.0 in gaps
             sigma_norm = np.sqrt(np.clip(kriging_var / self.sill, 0.0, 1.0))
             # Broadcast across time steps: (T, M)
-            base_db + (self.safety_margin_db * sigma_norm[np.newaxis, :])
+            base_db = base_db + (self.safety_margin_db * sigma_norm[np.newaxis, :])
 
         return base_db

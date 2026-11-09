@@ -10,16 +10,25 @@ class ExactAcousticKriging:
     This model assumes that the inserted sound map is an outside in an open space with no obstacles or reflections, and that the sound field is smooth and continuous.
     Calculation is performed in the linear energy domain to avoid bias from dB averaging.
     """
-    def __init__(self, practical_range=None, sill=1.0, range_ratio=0.25):
+    def __init__(self, practical_range=None, sill=1.0, range_ratio=0.25, safety_margin_db=0.0, peak_boost=False):
         """
         Inputs:
             sill: the variance between points (in linear energy units)
-            practical_range: the range at which the correlation drops to ~5% of the sill (in meters). Will be automatically inferred from the sound map geometry if not provided.
+            
+            practical_range: the range at which the correlation drops to ~5% of the sill (in meters). 
+                                Will be automatically inferred from the sound map geometry if not provided.
+            
             range_ratio: float, fraction of map diagonal to use when practical_range=None (default 0.25)
+            
+            safety_margin_db: float, maximum dB cushion added in unmeasured dead zones.
+                          Scales smoothly with spatial uncertainty (0 dB at phones, 
+                          up to safety_margin_db in large gaps).
         """
         self.practical_range = practical_range
         self.sill = sill
         self.range_ratio = range_ratio
+        self.safety_margin_db = float(safety_margin_db)
+        self.peak_boost = peak_boost
 
     def _variogram(self, h, eff_range):
         """
@@ -37,6 +46,9 @@ class ExactAcousticKriging:
         Output:
             predicted_levels: (T, M)    #Estimated sound levels at each time step for all M query points in dB
         """
+        #Ensure 2D shape (T, N) even if T=1
+        if phone_levels.ndim == 1:
+            phone_levels = phone_levels[np.newaxis, :]
 
         #Extract dimensions from input arrays
         N = phone_positions.shape[0]
@@ -52,9 +64,6 @@ class ExactAcousticKriging:
         else:
             eff_range = self.practical_range
 
-        #Ensure 2D shape (T, N) even if T=1
-        if phone_levels.ndim == 1:
-            phone_levels = phone_levels[np.newaxis, :]
 
         #Transform known dB levels to linear energy domain as to avoid bias from dB averaging
         linear_energy = 10.0 ** (phone_levels / 10.0)  # (T, N)
@@ -88,4 +97,28 @@ class ExactAcousticKriging:
         pred_energy = np.maximum(pred_energy, 1e-12) #Clamp any negative or near-zero predicted energy values to avoid issues with logarithmic conversion
 
         #Convert back to dB and return the predicted sound levels at each query point for all time steps
-        return 10.0 * np.log10(pred_energy)
+        base_db = 10.0 * np.log10(pred_energy)
+
+        #Apply Peak Headroom Boost if enabled (for point sources)
+        if self.peak_boost:
+            #Estimate the missing maximum by findeing the max sensor reading and accounting for average phone spacing
+            max_measured_db = np.max(phone_levels, axis=1, keepdims=True)  # (T, 1)
+            #Estimate the minimum distance from source to closest phone based on density
+            mean_spacing = np.sqrt(np.prod(np.ptp(phone_positions, axis=0)) / N) 
+            expected_headroom = 20.0 * np.log10(mean_spacing / 1.0)  #Assuming 1 meter reference distance
+
+            #Add the expected headroom to the max measured dB to get the peak boost
+            p90 = np.percentile(phone_levels, 90, axis=1, keepdims=True)  # (T, 1)
+            peak_weights = np.clip((base_db - p90) / (np.max(base_db, axis=1, keepdims=True) - p90 + 1e-6), 0.0, 1.0)  # (T, M)
+            base_db = base_db + (expected_headroom * (peak_weights)**2)
+
+        #Apply hearing-protection safety buffer
+        if self.safety_margin_db > 0.0:
+            # Kriging estimation variance: sigma^2 = sum(W_aug * B_aug)
+            kriging_var = np.sum(W_aug * B_aug, axis=0)
+            # Normalized standard deviation: 0.0 at phone coordinates, approaching 1.0 in gaps
+            sigma_norm = np.sqrt(np.clip(kriging_var / self.sill, 0.0, 1.0))
+            # Broadcast across time steps: (T, M)
+            base_db + (self.safety_margin_db * sigma_norm[np.newaxis, :])
+
+        return base_db

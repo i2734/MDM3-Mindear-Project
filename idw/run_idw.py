@@ -2,7 +2,7 @@ import os
 import sys
 
 #finding the group files (extract_sound.py, scenarios) in the parent folder
-sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), ".."))
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "Basic_Sound_Map_Files"))
 OUT_DIR = os.path.dirname(os.path.abspath(__file__))   # save figures next to this script
 
 import matplotlib

@@ -83,7 +83,7 @@ SPECTATOR_LW_DB = np.array([68.0, 63.8, 73.6, 77.6, 70.3, 63.1])
 ASSUMED_OCCUPANCY = 27000 
 
 SOURCE_SPACING = 8.0 #(across stands) design choice: each source represents 8mx8m space, when divided by the total stand area it gives as just under 300 sound sources with each source representing around 91 spectators
-SOURCE_SOFTENING_M = 2.0  # Avoids very large values close to a source
+MIN_DISTANCE_M = 1.0  # 0 m height difference; minimum 2D distance of 1 m
 
 #simulating 3 minutes of football match activity 
 DURATION_SECONDS = 3 * 60 
@@ -178,10 +178,11 @@ def crowd_sources():
 SOURCES, SECTIONS = crowd_sources()
 
 
-# inverse square spreading, with the 2m term stopping very high levels near a source
+# 2D inverse-square spreading, with a 1 m minimum distance
 def direct_energy(sx, sy):
-    """Calculate inverse-square spreading from one source across the grid, softened within 2 m."""
-    return 1.0 / ((X - sx)**2 + (Y - sy)**2 + SOURCE_SOFTENING_M**2)
+    """Calculate inverse-square spreading using a minimum horizontal distance of 1 m."""
+    distance = np.maximum(np.hypot(X - sx, Y - sy), MIN_DISTANCE_M)
+    return 1.0 / distance**2
 
 
 # mirror the source across the wall to calculate where reflected sound comes from
@@ -246,7 +247,7 @@ def reflected_geometry(sx, sy, wall_sequence):
         valid &= same_side(*path[j], *path[j + 2], wall)
 
     # Diagonal stand boundaries are not physical walls, so they do not reflect sound
-    return np.where(valid & np.isfinite(distance), 1.0 / (distance**2 + SOURCE_SOFTENING_M**2), 0.0)
+    return np.where(valid & np.isfinite(distance), 1.0 / np.maximum(distance, MIN_DISTANCE_M)**2, 0.0)
 
 
 @lru_cache(maxsize=2)
@@ -356,7 +357,7 @@ def draw_venue(ax, show_sources=False):
     ax.plot([PITCH_X0, PITCH_X1], [(PITCH_Y0 + PITCH_Y1) / 2] * 2, color="white", lw=1, zorder=5)
     ax.add_patch(Circle(((PITCH_X0 + PITCH_X1) / 2, (PITCH_Y0 + PITCH_Y1) / 2), 9.15, fill=False, edgecolor="white", lw=1, zorder=5))
     for _, a, b, _ in WALLS:
-        ax.plot([a[0], b[0]], [a[1], b[1]], color="white", lw=2.5, zorder=6)
+        ax.plot([a[0], b[0]], [a[1], b[1]], color="#A9A9A9", lw=2.5, zorder=6)
     if show_sources:
         pts = np.array([(sx, sy) for sx, sy, _ in SOURCES])
         ax.scatter(pts[:, 0], pts[:, 1], s=4, c="white", alpha=0.4, zorder=6)
@@ -372,17 +373,17 @@ def main():
     # use the same colour scale for all frames so changes can be compared
     vmin, vmax = float(display_maps.min()), float(display_maps.max())
     fig, ax = plt.subplots(figsize=(8, 10), constrained_layout=True)
-    cmap = plt.get_cmap("viridis").copy()
+    cmap = plt.get_cmap("inferno").copy()
     cmap.set_bad("#eeeeee")
     im = ax.imshow(display_maps[0], extent=(x[0], x[-1], y[0], y[-1]), origin="lower", cmap=cmap, vmin=vmin, vmax=vmax, interpolation="nearest", aspect="equal")
     draw_venue(ax)
     fig.colorbar(im, ax=ax, label="Sound Pressure Level (dB)", shrink=0.75, pad=0.02)
-    title = ax.set_title("Stadium Sound Map (Ashton Gate-inspired stadium) — frame 1")
 
+    title = ax.set_title("Stadium Sound Map — Crowd Noise (Ashton Gate-inspired)\nSimulation Time: 0 s / 180 s (3-minute simulation)")
     def update(frame):
         """Replace the heatmap and title with the next frame of the simulation."""
         im.set_data(display_maps[frame])
-        title.set_text(f"Stadium Sound Map (Ashton Gate-inspired stadium) — frame {frame + 1}/{len(sound_maps)}")
+        title.set_text("Stadium Sound Map — Crowd Noise (Ashton Gate-inspired)\n"f"Simulation Time: {frame * TIME_STEP_SECONDS:.0f} s / {DURATION_SECONDS:.0f} s (3-minute simulation)")
         return im, title
 
     # 120ms is the animation playback speed, not the 2s of match time per frame

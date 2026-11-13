@@ -136,9 +136,9 @@ def extract_measurements(sound_maps, x, y, phone_positions, allowed_mask=None):
     return maps[:, iy, ix]
 
 
-def prepare_interpolation_data(sound_maps, x, y, phone_counts, layouts, seed=42, allowed_mask=None):
+def prepare_interpolation_data(sound_maps, x, y, phone_counts, layouts, seed=42, allowed_mask=None):   
     """Build phone measurements and full-map true values for each layout and phone count."""
-    x, y, mask, _ = _validate(x, y, allowed_mask)
+    x, y, mask, _ = _validate(x, y, allowed_mask)    
     maps = np.asarray(sound_maps, dtype=float)
 
     if maps.ndim == 2:
@@ -158,13 +158,22 @@ def prepare_interpolation_data(sound_maps, x, y, phone_counts, layouts, seed=42,
         for n in phone_counts:
             positions = generate_phone_positions(x, y, n, layout, seed, mask)
             measured = extract_measurements(maps, x, y, positions, mask)
+            # Find the grid indices occupied by microphones
+            ix = np.abs(x[None, :] - positions[:, 0, None]).argmin(axis=1)
+            iy = np.abs(y[None, :] - positions[:, 1, None]).argmin(axis=1)
+
+            training_flat = iy * len(x) + ix
+
+            # Identify query locations that are NOT microphone positions
+            query_flat = np.flatnonzero(mask.ravel())
+            evaluation_mask = ~np.isin(query_flat, training_flat)
 
             result[(n, layout)] = {
                 "phone_positions": positions,
                 "phone_levels": measured,
                 "query_positions": query,
                 "true_levels": truth,
-                "allowed_mask": mask
-            }
+                "evaluation_mask": evaluation_mask
+                    }
 
     return result

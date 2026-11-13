@@ -7,14 +7,29 @@ import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib.patches import Rectangle
 from single_wall import Wall, _intersect_parameters, material_properties
+from matplotlib.lines import Line2D
 
 FREQUENCIES = (125, 250, 500, 1000, 2000, 4000)
-SOURCE_DB_1M = 105.0  # assumed SPL at 1m per speaker in each octave band
+
+# Assumed total SPL at 1m from one speaker
+SOURCE_SPL_1M = 105.0
+
+# Convert broadband SPL at 1m into broadband sound power
+SOURCE_LW_DB = SOURCE_SPL_1M + 10 * np.log10(4 * np.pi)
+
+# Distribute sound power equally across six octave bands
+SOURCE_BAND_LW_DB = {
+    f: SOURCE_LW_DB - 10 * np.log10(len(FREQUENCIES))
+    for f in FREQUENCIES
+}
+
+# assumed SPL at 1m per speaker in each octave band
 WIDTH, LENGTH = 24.0, 14.0
 x = np.linspace(0, WIDTH, 193)
 y = np.linspace(0, LENGTH, 113)
 X, Y = np.meshgrid(x, y)
 EPS = 1e-8
+MIN_DISTANCE_M = 1.0  # 0 m height difference; minimum 2D distance of 1 m
 
 # speaker positions and directions (x, y, angle in degrees)
 SPEAKERS = [(6.5, 1.6, 82.0), (17.5, 1.6, 98.0)]
@@ -131,8 +146,8 @@ def direct_energy(speaker, frequency, RX, RY):
     """Calculate direct sound energy using distance and speaker direction."""
     # direct sound, reducing with distance and speaker direction
     sx, sy, angle = speaker
-    distance = np.maximum(np.hypot(RX - sx, RY - sy), 1.0)
-    intensity = energy_from_db(SOURCE_DB_1M) * directional_gain(sx, sy, angle, RX, RY) / distance**2
+    distance = np.maximum(np.hypot(RX - sx, RY - sy), MIN_DISTANCE_M)
+    intensity = (energy_from_db(SOURCE_BAND_LW_DB[frequency])* directional_gain(sx, sy, angle, RX, RY)/ (4 * np.pi * distance**2))
     return np.where(unobstructed(sx, sy, RX, RY), intensity, 0.0)
 
 
@@ -180,7 +195,7 @@ def reflected_energy(speaker, frequency, RX, RY, wall_sequence, treated=True):
     # speaker direction towards the first reflection
     first_x, first_y = bounce[0]
     gain = directional_gain(sx, sy, angle, first_x, first_y)
-    intensity = energy_from_db(SOURCE_DB_1M) * gain * rho / np.maximum(distance, 1.0)**2
+    intensity = (energy_from_db(SOURCE_BAND_LW_DB[frequency])* gain * rho/ (4 * np.pi * np.maximum(distance, MIN_DISTANCE_M)**2))
     return np.where(valid & np.isfinite(intensity), intensity, 0.0)
 
 
@@ -228,8 +243,16 @@ def draw_venue(ax, treated=True):
     """Draw the venue walls, audience outline, stage and labelled speakers."""
     # acoustic panel sections are cyan and concrete walls are white
     for _, start, end, kind in WALLS:
-        color = "cyan" if treated and kind == "panel" else "white"
-        ax.plot([start[0], end[0]], [start[1], end[1]], color=color, linewidth=3, zorder=5)
+        is_panel = treated and kind == "panel"
+
+        ax.plot(
+            [start[0], end[0]],
+            [start[1], end[1]],
+            color="#00FFFF" if is_panel else "#A9A9A9",
+            linewidth=7 if is_panel else 3,
+            solid_capstyle="butt",
+            zorder=11
+        )
 
     # outline the audience area without covering the sound map
     front_y = STAGE[1] + STAGE[3] + WALL_MARGIN
@@ -244,8 +267,8 @@ def draw_venue(ax, treated=True):
         angle = np.deg2rad(direction)
         ax.annotate("", xy=(sx + 1.7 * np.cos(angle), sy + 1.7 * np.sin(angle)),
                     xytext=(sx, sy), arrowprops=dict(arrowstyle="-|>", color="red", lw=2.2), zorder=8)
-        ax.text(sx, sy - 0.55, f"Speaker{i}", color="white", ha="center", va="top",
-                fontsize=10, fontweight="bold", zorder=10)
+        ax.text(sx, sy - 0.85, f"Speaker {i}",color="white", fontsize=11,fontweight="bold", ha="center",bbox=dict(facecolor="black", alpha=0.75,edgecolor="none", pad=2),zorder=15)
+
 
     ax.add_patch(Rectangle(STAGE[:2], STAGE[2], STAGE[3], facecolor="darkslategrey", alpha=1, zorder=6))
     ax.text(12, 0.65, "STAGE", color="white", ha="center", va="center", fontsize=10, fontweight="bold",zorder=10)
@@ -257,10 +280,12 @@ def main():
     """Plot the sound map for the acoustically treated concert venue."""
     sound_db, _ = simulate(treated=True, reflection_order=2)
     fig, ax = plt.subplots(figsize=(11, 7), constrained_layout=True)
-    im = ax.pcolormesh(x, y, sound_db, shading="auto", cmap="viridis")
+    im = ax.pcolormesh(x, y, sound_db, shading="auto", cmap="inferno")
     draw_venue(ax, treated=True)
-    ax.set_title("Concert Sound Map (O2 Academy Bristol-inspired)")
+    ax.set_title("Concert Sound Map — Two Directional Speakers (O2 Academy Bristol-inspired)\nStatic simulated sound field")    
     fig.colorbar(im, ax=ax, label="Sound Pressure Level (dB)")
+    ax.legend(
+    handles=[Line2D([0], [0],color="#00FFFF",linewidth=6,label="Acoustic panels")],loc="upper center",bbox_to_anchor=(0.5, -0.08),frameon=False,fontsize=10)
     plt.show()
 
 

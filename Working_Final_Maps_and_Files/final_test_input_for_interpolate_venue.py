@@ -3,6 +3,7 @@
 # uncomment the appropriate line below to choose the venue sound map
 import concert_map as sound_map
 # import stadium_map as sound_map
+# import race_track_map as sound_map
 
 from extract_sound_venues import prepare_interpolation_data
 
@@ -34,3 +35,4 @@ phone_positions = data["phone_positions"]
 phone_levels = data["phone_levels"]
 query_positions = data["query_positions"]
 true_levels = data["true_levels"]
+evaluation_mask = data["evaluation_mask"]

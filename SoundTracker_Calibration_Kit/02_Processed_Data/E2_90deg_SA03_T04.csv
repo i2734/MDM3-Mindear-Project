@@ -1,0 +1,16 @@
+recorded_at,event_id,contributor_bucket,lat,lon,accuracy_m,laeq_db,lamax_db,integration_seconds,calibration_offset_db,uploaded,invite,phone_model,device_class,consent_version
+2026-11-10T10:00:02.000Z,calib-e2_90deg,phone-sa03ff,51.4545,-2.5879,5.0,75.75,79.95,1,0,True,lab01,Galaxy A54,samsung-a54,phase3-draft-1
+2026-11-10T10:00:03.000Z,calib-e2_90deg,phone-sa03ff,51.4545,-2.5879,5.0,76.46,80.66,1,0,True,lab01,Galaxy A54,samsung-a54,phase3-draft-1
+2026-11-10T10:00:04.000Z,calib-e2_90deg,phone-sa03ff,51.4545,-2.5879,5.0,76.57,80.77,1,0,True,lab01,Galaxy A54,samsung-a54,phase3-draft-1
+2026-11-10T10:00:05.000Z,calib-e2_90deg,phone-sa03ff,51.4545,-2.5879,5.0,76.23,80.43,1,0,True,lab01,Galaxy A54,samsung-a54,phase3-draft-1
+2026-11-10T10:00:06.000Z,calib-e2_90deg,phone-sa03ff,51.4545,-2.5879,5.0,75.91,80.11,1,0,True,lab01,Galaxy A54,samsung-a54,phase3-draft-1
+2026-11-10T10:00:07.000Z,calib-e2_90deg,phone-sa03ff,51.4545,-2.5879,5.0,76.32,80.52,1,0,True,lab01,Galaxy A54,samsung-a54,phase3-draft-1
+2026-11-10T10:00:08.000Z,calib-e2_90deg,phone-sa03ff,51.4545,-2.5879,5.0,76.29,80.49,1,0,True,lab01,Galaxy A54,samsung-a54,phase3-draft-1
+2026-11-10T10:00:09.000Z,calib-e2_90deg,phone-sa03ff,51.4545,-2.5879,5.0,75.95,80.15,1,0,True,lab01,Galaxy A54,samsung-a54,phase3-draft-1
+2026-11-10T10:00:10.000Z,calib-e2_90deg,phone-sa03ff,51.4545,-2.5879,5.0,75.99,80.19,1,0,True,lab01,Galaxy A54,samsung-a54,phase3-draft-1
+2026-11-10T10:00:11.000Z,calib-e2_90deg,phone-sa03ff,51.4545,-2.5879,5.0,76.24,80.44,1,0,True,lab01,Galaxy A54,samsung-a54,phase3-draft-1
+2026-11-10T10:00:12.000Z,calib-e2_90deg,phone-sa03ff,51.4545,-2.5879,5.0,76.19,80.39,1,0,True,lab01,Galaxy A54,samsung-a54,phase3-draft-1
+2026-11-10T10:00:13.000Z,calib-e2_90deg,phone-sa03ff,51.4545,-2.5879,5.0,76.07,80.27,1,0,True,lab01,Galaxy A54,samsung-a54,phase3-draft-1
+2026-11-10T10:00:14.000Z,calib-e2_90deg,phone-sa03ff,51.4545,-2.5879,5.0,76.28,80.48,1,0,True,lab01,Galaxy A54,samsung-a54,phase3-draft-1
+2026-11-10T10:00:15.000Z,calib-e2_90deg,phone-sa03ff,51.4545,-2.5879,5.0,76.31,80.51,1,0,True,lab01,Galaxy A54,samsung-a54,phase3-draft-1
+2026-11-10T10:00:16.000Z,calib-e2_90deg,phone-sa03ff,51.4545,-2.5879,5.0,76.5,80.7,1,0,True,lab01,Galaxy A54,samsung-a54,phase3-draft-1

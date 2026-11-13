@@ -1,0 +1,18 @@
+recorded_at,event_id,contributor_bucket,lat,lon,accuracy_m,laeq_db,lamax_db,integration_seconds,calibration_offset_db,uploaded,invite,phone_model,device_class,consent_version
+2026-11-10T10:00:01.000Z,calib-e1_95db,phone-ip03cc,51.4545,-2.5879,5.0,93.43,97.63,1,0,True,lab01,iPhone 15,iphone-15,phase3-draft-1
+2026-11-10T10:00:02.000Z,calib-e1_95db,phone-ip03cc,51.4545,-2.5879,5.0,93.77,97.97,1,0,True,lab01,iPhone 15,iphone-15,phase3-draft-1
+2026-11-10T10:00:03.000Z,calib-e1_95db,phone-ip03cc,51.4545,-2.5879,5.0,93.38,97.58,1,0,True,lab01,iPhone 15,iphone-15,phase3-draft-1
+2026-11-10T10:00:04.000Z,calib-e1_95db,phone-ip03cc,51.4545,-2.5879,5.0,93.09,97.29,1,0,True,lab01,iPhone 15,iphone-15,phase3-draft-1
+2026-11-10T10:00:05.000Z,calib-e1_95db,phone-ip03cc,51.4545,-2.5879,5.0,93.5,97.7,1,0,True,lab01,iPhone 15,iphone-15,phase3-draft-1
+2026-11-10T10:00:06.000Z,calib-e1_95db,phone-ip03cc,51.4545,-2.5879,5.0,94.12,98.32,1,0,True,lab01,iPhone 15,iphone-15,phase3-draft-1
+2026-11-10T10:00:07.000Z,calib-e1_95db,phone-ip03cc,51.4545,-2.5879,5.0,93.21,97.41,1,0,True,lab01,iPhone 15,iphone-15,phase3-draft-1
+2026-11-10T10:00:08.000Z,calib-e1_95db,phone-ip03cc,51.4545,-2.5879,5.0,93.24,97.44,1,0,True,lab01,iPhone 15,iphone-15,phase3-draft-1
+2026-11-10T10:00:09.000Z,calib-e1_95db,phone-ip03cc,51.4545,-2.5879,5.0,93.45,97.65,1,0,True,lab01,iPhone 15,iphone-15,phase3-draft-1
+2026-11-10T10:00:10.000Z,calib-e1_95db,phone-ip03cc,51.4545,-2.5879,5.0,93.25,97.45,1,0,True,lab01,iPhone 15,iphone-15,phase3-draft-1
+2026-11-10T10:00:11.000Z,calib-e1_95db,phone-ip03cc,51.4545,-2.5879,5.0,93.63,97.83,1,0,True,lab01,iPhone 15,iphone-15,phase3-draft-1
+2026-11-10T10:00:12.000Z,calib-e1_95db,phone-ip03cc,51.4545,-2.5879,5.0,92.88,97.08,1,0,True,lab01,iPhone 15,iphone-15,phase3-draft-1
+2026-11-10T10:00:13.000Z,calib-e1_95db,phone-ip03cc,51.4545,-2.5879,5.0,93.1,97.3,1,0,True,lab01,iPhone 15,iphone-15,phase3-draft-1
+2026-11-10T10:00:14.000Z,calib-e1_95db,phone-ip03cc,51.4545,-2.5879,5.0,92.45,96.65,1,0,True,lab01,iPhone 15,iphone-15,phase3-draft-1
+2026-11-10T10:00:15.000Z,calib-e1_95db,phone-ip03cc,51.4545,-2.5879,5.0,93.32,97.52,1,0,True,lab01,iPhone 15,iphone-15,phase3-draft-1
+2026-11-10T10:00:16.000Z,calib-e1_95db,phone-ip03cc,51.4545,-2.5879,5.0,93.37,97.57,1,0,True,lab01,iPhone 15,iphone-15,phase3-draft-1
+2026-11-10T10:00:17.000Z,calib-e1_95db,phone-ip03cc,51.4545,-2.5879,5.0,93.03,97.23,1,0,True,lab01,iPhone 15,iphone-15,phase3-draft-1

@@ -1,0 +1,181 @@
+Filename,Condition_Folder,Experiment,Target_Level_dBA,Orientation,Pocket,Phone_ID,Trial,Raw_File_Found,N_Raw_Rows,N_Clamped_Dropped,N_Valid_Seconds,Phone_LAeq_dB,Reference_LAeq_dB,Measurement_Error_dB,Contributor_Bucket,Phone_Model,Device_Class,QC_Status
+E1_65dB_IP01_T01.csv,E1_65dB,Intensity,65,0°,No,IP01,1,True,17,0,15,64.1592,64.75,-0.5908,phone-ip01aa,iPhone 13,iphone-13,Valid
+E1_65dB_IP01_T02.csv,E1_65dB,Intensity,65,0°,No,IP01,2,True,17,0,15,63.8082,65.08,-1.2718,phone-ip01aa,iPhone 13,iphone-13,Valid
+E1_65dB_IP01_T03.csv,E1_65dB,Intensity,65,0°,No,IP01,3,True,17,0,15,64.6166,65.25,-0.6334,phone-ip01aa,iPhone 13,iphone-13,Valid
+E1_65dB_IP01_T04.csv,E1_65dB,Intensity,65,0°,No,IP01,4,True,17,0,15,64.2732,64.63,-0.3568,phone-ip01aa,iPhone 13,iphone-13,Valid
+E1_65dB_IP01_T05.csv,E1_65dB,Intensity,65,0°,No,IP01,5,True,17,0,15,64.4428,64.88,-0.4372,phone-ip01aa,iPhone 13,iphone-13,Valid
+E1_65dB_IP02_T01.csv,E1_65dB,Intensity,65,0°,No,IP02,1,True,17,0,15,63.7061,64.69,-0.9839,phone-ip02bb,iPhone 14,iphone-14,Valid
+E1_65dB_IP02_T02.csv,E1_65dB,Intensity,65,0°,No,IP02,2,True,17,0,15,64.384,64.84,-0.456,phone-ip02bb,iPhone 14,iphone-14,Valid
+E1_65dB_IP02_T03.csv,E1_65dB,Intensity,65,0°,No,IP02,3,True,17,0,15,64.4911,65.43,-0.9389,phone-ip02bb,iPhone 14,iphone-14,Valid
+E1_65dB_IP02_T04.csv,E1_65dB,Intensity,65,0°,No,IP02,4,True,17,0,15,63.9083,64.74,-0.8317,phone-ip02bb,iPhone 14,iphone-14,Valid
+E1_65dB_IP02_T05.csv,E1_65dB,Intensity,65,0°,No,IP02,5,True,17,0,15,64.0384,64.82,-0.7816,phone-ip02bb,iPhone 14,iphone-14,Valid
+E1_65dB_IP03_T01.csv,E1_65dB,Intensity,65,0°,No,IP03,1,True,17,0,15,64.7185,65.12,-0.4015,phone-ip03cc,iPhone 15,iphone-15,Valid
+E1_65dB_IP03_T02.csv,E1_65dB,Intensity,65,0°,No,IP03,2,True,17,0,15,65.7077,65.28,0.4277,phone-ip03cc,iPhone 15,iphone-15,Valid
+E1_65dB_IP03_T03.csv,E1_65dB,Intensity,65,0°,No,IP03,3,True,17,0,15,64.5607,64.97,-0.4093,phone-ip03cc,iPhone 15,iphone-15,Valid
+E1_65dB_IP03_T04.csv,E1_65dB,Intensity,65,0°,No,IP03,4,True,17,0,15,64.8872,65.02,-0.1328,phone-ip03cc,iPhone 15,iphone-15,Valid
+E1_65dB_IP03_T05.csv,E1_65dB,Intensity,65,0°,No,IP03,5,True,17,0,15,63.6002,64.82,-1.2198,phone-ip03cc,iPhone 15,iphone-15,Valid
+E1_65dB_SA01_T01.csv,E1_65dB,Intensity,65,0°,No,SA01,1,True,17,0,15,62.8298,64.83,-2.0002,phone-sa01dd,Galaxy S22,samsung-s22,Valid
+E1_65dB_SA01_T02.csv,E1_65dB,Intensity,65,0°,No,SA01,2,True,17,0,15,64.2744,65.02,-0.7456,phone-sa01dd,Galaxy S22,samsung-s22,Valid
+E1_65dB_SA01_T03.csv,E1_65dB,Intensity,65,0°,No,SA01,3,True,17,0,15,63.2206,65.1,-1.8794,phone-sa01dd,Galaxy S22,samsung-s22,Valid
+E1_65dB_SA01_T04.csv,E1_65dB,Intensity,65,0°,No,SA01,4,True,17,0,15,63.7492,65.51,-1.7608,phone-sa01dd,Galaxy S22,samsung-s22,Valid
+E1_65dB_SA01_T05.csv,E1_65dB,Intensity,65,0°,No,SA01,5,True,17,0,15,63.8548,65.01,-1.1552,phone-sa01dd,Galaxy S22,samsung-s22,Valid
+E1_65dB_SA02_T01.csv,E1_65dB,Intensity,65,0°,No,SA02,1,True,17,0,15,65.3357,65.25,0.0857,phone-sa02ee,Galaxy S23,samsung-s23,Valid
+E1_65dB_SA02_T02.csv,E1_65dB,Intensity,65,0°,No,SA02,2,True,17,0,15,65.0835,65.18,-0.0965,phone-sa02ee,Galaxy S23,samsung-s23,Valid
+E1_65dB_SA02_T03.csv,E1_65dB,Intensity,65,0°,No,SA02,3,True,17,0,15,63.907,64.83,-0.923,phone-sa02ee,Galaxy S23,samsung-s23,Valid
+E1_65dB_SA02_T04.csv,E1_65dB,Intensity,65,0°,No,SA02,4,True,17,0,15,63.884,64.77,-0.886,phone-sa02ee,Galaxy S23,samsung-s23,Valid
+E1_65dB_SA02_T05.csv,E1_65dB,Intensity,65,0°,No,SA02,5,True,17,0,15,64.8393,65.24,-0.4007,phone-sa02ee,Galaxy S23,samsung-s23,Valid
+E1_65dB_SA03_T01.csv,E1_65dB,Intensity,65,0°,No,SA03,1,True,17,0,15,63.3202,65.08,-1.7598,phone-sa03ff,Galaxy A54,samsung-a54,Valid
+E1_65dB_SA03_T02.csv,E1_65dB,Intensity,65,0°,No,SA03,2,True,17,0,15,63.0624,64.99,-1.9276,phone-sa03ff,Galaxy A54,samsung-a54,Valid
+E1_65dB_SA03_T03.csv,E1_65dB,Intensity,65,0°,No,SA03,3,True,17,0,15,62.691,65.02,-2.329,phone-sa03ff,Galaxy A54,samsung-a54,Valid
+E1_65dB_SA03_T04.csv,E1_65dB,Intensity,65,0°,No,SA03,4,True,17,0,15,62.7935,65.06,-2.2665,phone-sa03ff,Galaxy A54,samsung-a54,Valid
+E1_65dB_SA03_T05.csv,E1_65dB,Intensity,65,0°,No,SA03,5,True,17,0,15,62.5799,64.73,-2.1501,phone-sa03ff,Galaxy A54,samsung-a54,Valid
+E1_80dB_IP01_T01.csv,E1_80dB,Intensity,80,0°,No,IP01,1,True,17,0,15,79.2299,80.06,-0.8301,phone-ip01aa,iPhone 13,iphone-13,Valid
+E1_80dB_IP01_T02.csv,E1_80dB,Intensity,80,0°,No,IP01,2,True,17,0,15,79.0334,79.32,-0.2866,phone-ip01aa,iPhone 13,iphone-13,Valid
+E1_80dB_IP01_T03.csv,E1_80dB,Intensity,80,0°,No,IP01,3,True,17,0,15,79.3387,79.79,-0.4513,phone-ip01aa,iPhone 13,iphone-13,Valid
+E1_80dB_IP01_T04.csv,E1_80dB,Intensity,80,0°,No,IP01,4,True,17,0,15,79.2469,79.7,-0.4531,phone-ip01aa,iPhone 13,iphone-13,Valid
+E1_80dB_IP01_T05.csv,E1_80dB,Intensity,80,0°,No,IP01,5,True,17,0,15,79.4009,80.01,-0.6091,phone-ip01aa,iPhone 13,iphone-13,Valid
+E1_80dB_IP02_T01.csv,E1_80dB,Intensity,80,0°,No,IP02,1,True,17,0,15,77.4758,79.67,-2.1942,phone-ip02bb,iPhone 14,iphone-14,Valid
+E1_80dB_IP02_T02.csv,E1_80dB,Intensity,80,0°,No,IP02,2,True,17,0,15,79.0107,79.83,-0.8193,phone-ip02bb,iPhone 14,iphone-14,Valid
+E1_80dB_IP02_T03.csv,E1_80dB,Intensity,80,0°,No,IP02,3,True,17,0,15,78.7859,79.96,-1.1741,phone-ip02bb,iPhone 14,iphone-14,Valid
+E1_80dB_IP02_T04.csv,E1_80dB,Intensity,80,0°,No,IP02,4,True,17,0,15,78.1644,79.8,-1.6356,phone-ip02bb,iPhone 14,iphone-14,Valid
+E1_80dB_IP02_T05.csv,E1_80dB,Intensity,80,0°,No,IP02,5,True,17,0,15,78.7741,79.78,-1.0059,phone-ip02bb,iPhone 14,iphone-14,Valid
+E1_80dB_IP03_T01.csv,E1_80dB,Intensity,80,0°,No,IP03,1,True,17,0,15,78.7402,80.15,-1.4098,phone-ip03cc,iPhone 15,iphone-15,Valid
+E1_80dB_IP03_T02.csv,E1_80dB,Intensity,80,0°,No,IP03,2,True,17,0,15,79.0624,79.98,-0.9176,phone-ip03cc,iPhone 15,iphone-15,Valid
+E1_80dB_IP03_T03.csv,E1_80dB,Intensity,80,0°,No,IP03,3,True,17,0,15,79.0333,80.23,-1.1967,phone-ip03cc,iPhone 15,iphone-15,Valid
+E1_80dB_IP03_T04.csv,E1_80dB,Intensity,80,0°,No,IP03,4,True,17,0,15,78.8695,80.14,-1.2705,phone-ip03cc,iPhone 15,iphone-15,Valid
+E1_80dB_IP03_T05.csv,E1_80dB,Intensity,80,0°,No,IP03,5,True,17,0,15,79.2692,80.05,-0.7808,phone-ip03cc,iPhone 15,iphone-15,Valid
+E1_80dB_SA01_T01.csv,E1_80dB,Intensity,80,0°,No,SA01,1,True,17,0,15,78.0992,79.87,-1.7708,phone-sa01dd,Galaxy S22,samsung-s22,Valid
+E1_80dB_SA01_T02.csv,E1_80dB,Intensity,80,0°,No,SA01,2,True,17,0,15,77.9789,79.64,-1.6611,phone-sa01dd,Galaxy S22,samsung-s22,Valid
+E1_80dB_SA01_T03.csv,E1_80dB,Intensity,80,0°,No,SA01,3,True,17,0,15,78.7214,79.97,-1.2486,phone-sa01dd,Galaxy S22,samsung-s22,Valid
+E1_80dB_SA01_T04.csv,E1_80dB,Intensity,80,0°,No,SA01,4,True,17,0,15,78.2075,80.01,-1.8025,phone-sa01dd,Galaxy S22,samsung-s22,Valid
+E1_80dB_SA01_T05.csv,E1_80dB,Intensity,80,0°,No,SA01,5,True,17,0,15,78.7434,79.79,-1.0466,phone-sa01dd,Galaxy S22,samsung-s22,Valid
+E1_80dB_SA02_T01.csv,E1_80dB,Intensity,80,0°,No,SA02,1,True,17,0,15,79.2338,80.49,-1.2562,phone-sa02ee,Galaxy S23,samsung-s23,Valid
+E1_80dB_SA02_T02.csv,E1_80dB,Intensity,80,0°,No,SA02,2,True,17,0,15,79.1932,80.15,-0.9568,phone-sa02ee,Galaxy S23,samsung-s23,Valid
+E1_80dB_SA02_T03.csv,E1_80dB,Intensity,80,0°,No,SA02,3,True,17,0,15,78.7638,79.72,-0.9562,phone-sa02ee,Galaxy S23,samsung-s23,Valid
+E1_80dB_SA02_T04.csv,E1_80dB,Intensity,80,0°,No,SA02,4,True,17,0,15,79.8474,80.01,-0.1626,phone-sa02ee,Galaxy S23,samsung-s23,Valid
+E1_80dB_SA02_T05.csv,E1_80dB,Intensity,80,0°,No,SA02,5,True,17,0,15,79.2824,80.05,-0.7676,phone-sa02ee,Galaxy S23,samsung-s23,Valid
+E1_80dB_SA03_T01.csv,E1_80dB,Intensity,80,0°,No,SA03,1,True,17,0,15,78.5007,79.88,-1.3793,phone-sa03ff,Galaxy A54,samsung-a54,Valid
+E1_80dB_SA03_T02.csv,E1_80dB,Intensity,80,0°,No,SA03,2,True,17,0,15,78.1914,80.16,-1.9686,phone-sa03ff,Galaxy A54,samsung-a54,Valid
+E1_80dB_SA03_T03.csv,E1_80dB,Intensity,80,0°,No,SA03,3,True,17,0,15,77.2655,79.95,-2.6845,phone-sa03ff,Galaxy A54,samsung-a54,Valid
+E1_80dB_SA03_T04.csv,E1_80dB,Intensity,80,0°,No,SA03,4,True,17,0,15,76.7589,79.73,-2.9711,phone-sa03ff,Galaxy A54,samsung-a54,Valid
+E1_80dB_SA03_T05.csv,E1_80dB,Intensity,80,0°,No,SA03,5,True,17,0,15,77.6793,80.01,-2.3307,phone-sa03ff,Galaxy A54,samsung-a54,Valid
+E1_95dB_IP01_T01.csv,E1_95dB,Intensity,95,0°,No,IP01,1,True,17,1,15,94.1435,94.78,-0.6365,phone-ip01aa,iPhone 13,iphone-13,Valid
+E1_95dB_IP01_T02.csv,E1_95dB,Intensity,95,0°,No,IP01,2,True,17,0,15,94.149,95.22,-1.071,phone-ip01aa,iPhone 13,iphone-13,Valid
+E1_95dB_IP01_T03.csv,E1_95dB,Intensity,95,0°,No,IP01,3,True,17,0,15,93.7197,94.88,-1.1603,phone-ip01aa,iPhone 13,iphone-13,Valid
+E1_95dB_IP01_T04.csv,E1_95dB,Intensity,95,0°,No,IP01,4,True,17,0,15,93.2341,94.56,-1.3259,phone-ip01aa,iPhone 13,iphone-13,Valid
+E1_95dB_IP01_T05.csv,E1_95dB,Intensity,95,0°,No,IP01,5,True,17,0,15,94.1144,94.93,-0.8156,phone-ip01aa,iPhone 13,iphone-13,Valid
+E1_95dB_IP02_T01.csv,E1_95dB,Intensity,95,0°,No,IP02,1,True,17,1,15,93.3638,95.19,-1.8262,phone-ip02bb,iPhone 14,iphone-14,Valid
+E1_95dB_IP02_T02.csv,E1_95dB,Intensity,95,0°,No,IP02,2,True,17,0,15,94.0186,95.31,-1.2914,phone-ip02bb,iPhone 14,iphone-14,Valid
+E1_95dB_IP02_T03.csv,E1_95dB,Intensity,95,0°,No,IP02,3,True,17,0,15,93.9946,94.87,-0.8754,phone-ip02bb,iPhone 14,iphone-14,Valid
+E1_95dB_IP02_T04.csv,E1_95dB,Intensity,95,0°,No,IP02,4,True,17,0,15,93.5389,94.73,-1.1911,phone-ip02bb,iPhone 14,iphone-14,Valid
+E1_95dB_IP02_T05.csv,E1_95dB,Intensity,95,0°,No,IP02,5,True,17,0,15,94.7732,95.56,-0.7868,phone-ip02bb,iPhone 14,iphone-14,Valid
+E1_95dB_IP03_T01.csv,E1_95dB,Intensity,95,0°,No,IP03,1,True,17,1,15,93.7254,95.16,-1.4346,phone-ip03cc,iPhone 15,iphone-15,Valid
+E1_95dB_IP03_T02.csv,E1_95dB,Intensity,95,0°,No,IP03,2,True,17,0,15,93.2094,94.35,-1.1406,phone-ip03cc,iPhone 15,iphone-15,Valid
+E1_95dB_IP03_T03.csv,E1_95dB,Intensity,95,0°,No,IP03,3,True,17,0,15,93.3454,94.73,-1.3846,phone-ip03cc,iPhone 15,iphone-15,Valid
+E1_95dB_IP03_T04.csv,E1_95dB,Intensity,95,0°,No,IP03,4,True,17,0,15,93.3332,94.96,-1.6268,phone-ip03cc,iPhone 15,iphone-15,Valid
+E1_95dB_IP03_T05.csv,E1_95dB,Intensity,95,0°,No,IP03,5,True,17,0,15,93.5281,94.79,-1.2619,phone-ip03cc,iPhone 15,iphone-15,Valid
+E1_95dB_SA01_T01.csv,E1_95dB,Intensity,95,0°,No,SA01,1,True,17,1,15,93.6238,95.33,-1.7062,phone-sa01dd,Galaxy S22,samsung-s22,Valid
+E1_95dB_SA01_T02.csv,E1_95dB,Intensity,95,0°,No,SA01,2,True,17,0,15,92.9399,94.96,-2.0201,phone-sa01dd,Galaxy S22,samsung-s22,Valid
+E1_95dB_SA01_T03.csv,E1_95dB,Intensity,95,0°,No,SA01,3,True,17,0,15,92.7232,94.62,-1.8968,phone-sa01dd,Galaxy S22,samsung-s22,Valid
+E1_95dB_SA01_T04.csv,E1_95dB,Intensity,95,0°,No,SA01,4,True,17,0,15,92.1379,94.57,-2.4321,phone-sa01dd,Galaxy S22,samsung-s22,Valid
+E1_95dB_SA01_T05.csv,E1_95dB,Intensity,95,0°,No,SA01,5,True,17,0,15,93.2069,95.06,-1.8531,phone-sa01dd,Galaxy S22,samsung-s22,Valid
+E1_95dB_SA02_T01.csv,E1_95dB,Intensity,95,0°,No,SA02,1,True,17,1,15,93.7575,94.82,-1.0625,phone-sa02ee,Galaxy S23,samsung-s23,Valid
+E1_95dB_SA02_T02.csv,E1_95dB,Intensity,95,0°,No,SA02,2,True,17,0,15,94.3914,95.23,-0.8386,phone-sa02ee,Galaxy S23,samsung-s23,Valid
+E1_95dB_SA02_T03.csv,E1_95dB,Intensity,95,0°,No,SA02,3,True,17,0,15,93.7211,94.69,-0.9689,phone-sa02ee,Galaxy S23,samsung-s23,Valid
+E1_95dB_SA02_T04.csv,E1_95dB,Intensity,95,0°,No,SA02,4,True,17,0,15,94.1423,95.44,-1.2977,phone-sa02ee,Galaxy S23,samsung-s23,Valid
+E1_95dB_SA02_T05.csv,E1_95dB,Intensity,95,0°,No,SA02,5,True,17,0,15,93.9655,94.93,-0.9645,phone-sa02ee,Galaxy S23,samsung-s23,Valid
+E1_95dB_SA03_T01.csv,E1_95dB,Intensity,95,0°,No,SA03,1,True,17,1,15,93.4169,95.53,-2.1131,phone-sa03ff,Galaxy A54,samsung-a54,Valid
+E1_95dB_SA03_T02.csv,E1_95dB,Intensity,95,0°,No,SA03,2,True,17,0,15,93.0551,95.1,-2.0449,phone-sa03ff,Galaxy A54,samsung-a54,Valid
+E1_95dB_SA03_T03.csv,E1_95dB,Intensity,95,0°,No,SA03,3,True,17,0,15,92.5515,95.44,-2.8885,phone-sa03ff,Galaxy A54,samsung-a54,Valid
+E1_95dB_SA03_T04.csv,E1_95dB,Intensity,95,0°,No,SA03,4,True,17,0,15,92.4074,95.07,-2.6626,phone-sa03ff,Galaxy A54,samsung-a54,Valid
+E1_95dB_SA03_T05.csv,E1_95dB,Intensity,95,0°,No,SA03,5,True,17,0,15,92.811,95.05,-2.239,phone-sa03ff,Galaxy A54,samsung-a54,Valid
+E2_90deg_IP01_T01.csv,E2_90deg,Orientation,80,90°,No,IP01,1,True,17,0,15,77.6187,80.15,-2.5313,phone-ip01aa,iPhone 13,iphone-13,Valid
+E2_90deg_IP01_T02.csv,E2_90deg,Orientation,80,90°,No,IP01,2,True,17,0,15,78.2525,79.67,-1.4175,phone-ip01aa,iPhone 13,iphone-13,Valid
+E2_90deg_IP01_T03.csv,E2_90deg,Orientation,80,90°,No,IP01,3,True,17,0,15,78.674,80.17,-1.496,phone-ip01aa,iPhone 13,iphone-13,Valid
+E2_90deg_IP01_T04.csv,E2_90deg,Orientation,80,90°,No,IP01,4,True,17,0,15,78.4506,79.71,-1.2594,phone-ip01aa,iPhone 13,iphone-13,Valid
+E2_90deg_IP01_T05.csv,E2_90deg,Orientation,80,90°,No,IP01,5,True,17,0,15,79.405,80.25,-0.845,phone-ip01aa,iPhone 13,iphone-13,Valid
+E2_90deg_IP02_T01.csv,E2_90deg,Orientation,80,90°,No,IP02,1,True,17,0,15,77.8751,80.16,-2.2849,phone-ip02bb,iPhone 14,iphone-14,Valid
+E2_90deg_IP02_T02.csv,E2_90deg,Orientation,80,90°,No,IP02,2,True,17,0,15,77.664,80.37,-2.706,phone-ip02bb,iPhone 14,iphone-14,Valid
+E2_90deg_IP02_T03.csv,E2_90deg,Orientation,80,90°,No,IP02,3,True,17,0,15,76.9097,79.84,-2.9303,phone-ip02bb,iPhone 14,iphone-14,Valid
+E2_90deg_IP02_T04.csv,E2_90deg,Orientation,80,90°,No,IP02,4,True,17,0,15,77.2841,79.53,-2.2459,phone-ip02bb,iPhone 14,iphone-14,Valid
+E2_90deg_IP02_T05.csv,E2_90deg,Orientation,80,90°,No,IP02,5,True,17,0,15,76.8857,79.89,-3.0043,phone-ip02bb,iPhone 14,iphone-14,Valid
+E2_90deg_IP03_T01.csv,E2_90deg,Orientation,80,90°,No,IP03,1,True,17,0,15,77.587,79.57,-1.983,phone-ip03cc,iPhone 15,iphone-15,Valid
+E2_90deg_IP03_T02.csv,E2_90deg,Orientation,80,90°,No,IP03,2,True,17,0,15,78.3187,80.4,-2.0813,phone-ip03cc,iPhone 15,iphone-15,Valid
+E2_90deg_IP03_T03.csv,E2_90deg,Orientation,80,90°,No,IP03,3,True,17,0,15,76.6244,79.74,-3.1156,phone-ip03cc,iPhone 15,iphone-15,Valid
+E2_90deg_IP03_T04.csv,E2_90deg,Orientation,80,90°,No,IP03,4,True,17,0,15,77.7864,80.06,-2.2736,phone-ip03cc,iPhone 15,iphone-15,Valid
+E2_90deg_IP03_T05.csv,E2_90deg,Orientation,80,90°,No,IP03,5,True,17,0,15,77.9161,79.65,-1.7339,phone-ip03cc,iPhone 15,iphone-15,Valid
+E2_90deg_SA01_T01.csv,E2_90deg,Orientation,80,90°,No,SA01,1,True,17,0,15,77.1713,79.77,-2.5987,phone-sa01dd,Galaxy S22,samsung-s22,Valid
+E2_90deg_SA01_T02.csv,E2_90deg,Orientation,80,90°,No,SA01,2,True,17,0,15,77.9271,80.21,-2.2829,phone-sa01dd,Galaxy S22,samsung-s22,Valid
+E2_90deg_SA01_T03.csv,E2_90deg,Orientation,80,90°,No,SA01,3,True,17,0,15,78.0077,79.68,-1.6723,phone-sa01dd,Galaxy S22,samsung-s22,Valid
+E2_90deg_SA01_T04.csv,E2_90deg,Orientation,80,90°,No,SA01,4,True,17,0,15,76.7653,79.81,-3.0447,phone-sa01dd,Galaxy S22,samsung-s22,Valid
+E2_90deg_SA01_T05.csv,E2_90deg,Orientation,80,90°,No,SA01,5,True,17,0,15,77.7303,80.14,-2.4097,phone-sa01dd,Galaxy S22,samsung-s22,Valid
+E2_90deg_SA02_T01.csv,E2_90deg,Orientation,80,90°,No,SA02,1,True,17,0,15,78.2341,79.86,-1.6259,phone-sa02ee,Galaxy S23,samsung-s23,Valid
+E2_90deg_SA02_T02.csv,E2_90deg,Orientation,80,90°,No,SA02,2,True,17,0,15,78.1483,79.57,-1.4217,phone-sa02ee,Galaxy S23,samsung-s23,Valid
+E2_90deg_SA02_T03.csv,E2_90deg,Orientation,80,90°,No,SA02,3,True,17,0,15,78.8359,80.37,-1.5341,phone-sa02ee,Galaxy S23,samsung-s23,Valid
+E2_90deg_SA02_T04.csv,E2_90deg,Orientation,80,90°,No,SA02,4,True,17,0,15,78.8099,80.18,-1.3701,phone-sa02ee,Galaxy S23,samsung-s23,Valid
+E2_90deg_SA02_T05.csv,E2_90deg,Orientation,80,90°,No,SA02,5,True,17,0,15,78.307,79.97,-1.663,phone-sa02ee,Galaxy S23,samsung-s23,Valid
+E2_90deg_SA03_T01.csv,E2_90deg,Orientation,80,90°,No,SA03,1,True,17,0,15,77.5824,79.97,-2.3876,phone-sa03ff,Galaxy A54,samsung-a54,Valid
+E2_90deg_SA03_T02.csv,E2_90deg,Orientation,80,90°,No,SA03,2,True,17,0,15,78.1947,80.67,-2.4753,phone-sa03ff,Galaxy A54,samsung-a54,Valid
+E2_90deg_SA03_T03.csv,E2_90deg,Orientation,80,90°,No,SA03,3,True,17,0,15,76.7973,80.12,-3.3227,phone-sa03ff,Galaxy A54,samsung-a54,Valid
+E2_90deg_SA03_T04.csv,E2_90deg,Orientation,80,90°,No,SA03,4,True,17,0,15,76.2097,79.84,-3.6303,phone-sa03ff,Galaxy A54,samsung-a54,Valid
+E2_90deg_SA03_T05.csv,E2_90deg,Orientation,80,90°,No,SA03,5,True,17,0,15,77.1333,79.92,-2.7867,phone-sa03ff,Galaxy A54,samsung-a54,Valid
+E2_180deg_IP01_T01.csv,E2_180deg,Orientation,80,180°,No,IP01,1,True,17,0,15,76.571,80.0,-3.429,phone-ip01aa,iPhone 13,iphone-13,Valid
+E2_180deg_IP01_T02.csv,E2_180deg,Orientation,80,180°,No,IP01,2,True,17,0,15,76.6341,80.03,-3.3959,phone-ip01aa,iPhone 13,iphone-13,Valid
+E2_180deg_IP01_T03.csv,E2_180deg,Orientation,80,180°,No,IP01,3,True,17,0,15,77.5302,80.45,-2.9198,phone-ip01aa,iPhone 13,iphone-13,Valid
+E2_180deg_IP01_T04.csv,E2_180deg,Orientation,80,180°,No,IP01,4,True,17,0,15,76.7087,79.84,-3.1313,phone-ip01aa,iPhone 13,iphone-13,Valid
+E2_180deg_IP01_T05.csv,E2_180deg,Orientation,80,180°,No,IP01,5,True,17,0,15,76.6034,79.7,-3.0966,phone-ip01aa,iPhone 13,iphone-13,Valid
+E2_180deg_IP02_T01.csv,E2_180deg,Orientation,80,180°,No,IP02,1,True,17,0,15,75.6521,79.96,-4.3079,phone-ip02bb,iPhone 14,iphone-14,Valid
+E2_180deg_IP02_T02.csv,E2_180deg,Orientation,80,180°,No,IP02,2,True,17,0,15,76.2614,79.67,-3.4086,phone-ip02bb,iPhone 14,iphone-14,Valid
+E2_180deg_IP02_T03.csv,E2_180deg,Orientation,80,180°,No,IP02,3,True,17,0,15,77.1085,80.38,-3.2715,phone-ip02bb,iPhone 14,iphone-14,Valid
+E2_180deg_IP02_T04.csv,E2_180deg,Orientation,80,180°,No,IP02,4,True,17,0,15,76.2135,80.15,-3.9365,phone-ip02bb,iPhone 14,iphone-14,Valid
+E2_180deg_IP02_T05.csv,E2_180deg,Orientation,80,180°,No,IP02,5,True,17,0,15,76.1491,80.18,-4.0309,phone-ip02bb,iPhone 14,iphone-14,Valid
+E2_180deg_IP03_T01.csv,E2_180deg,Orientation,80,180°,No,IP03,1,True,17,0,15,77.1182,80.12,-3.0018,phone-ip03cc,iPhone 15,iphone-15,Valid
+E2_180deg_IP03_T02.csv,E2_180deg,Orientation,80,180°,No,IP03,2,True,17,0,15,76.2767,80.19,-3.9133,phone-ip03cc,iPhone 15,iphone-15,Valid
+E2_180deg_IP03_T03.csv,E2_180deg,Orientation,80,180°,No,IP03,3,True,17,0,15,76.3387,79.77,-3.4313,phone-ip03cc,iPhone 15,iphone-15,Valid
+E2_180deg_IP03_T04.csv,E2_180deg,Orientation,80,180°,No,IP03,4,True,17,0,15,77.4584,80.33,-2.8716,phone-ip03cc,iPhone 15,iphone-15,Valid
+E2_180deg_IP03_T05.csv,E2_180deg,Orientation,80,180°,No,IP03,5,True,17,0,15,76.6221,79.67,-3.0479,phone-ip03cc,iPhone 15,iphone-15,Valid
+E2_180deg_SA01_T01.csv,E2_180deg,Orientation,80,180°,No,SA01,1,True,17,0,15,75.5148,79.81,-4.2952,phone-sa01dd,Galaxy S22,samsung-s22,Valid
+E2_180deg_SA01_T02.csv,E2_180deg,Orientation,80,180°,No,SA01,2,True,17,0,15,76.4587,80.14,-3.6813,phone-sa01dd,Galaxy S22,samsung-s22,Valid
+E2_180deg_SA01_T03.csv,E2_180deg,Orientation,80,180°,No,SA01,3,True,17,0,15,76.9016,80.29,-3.3884,phone-sa01dd,Galaxy S22,samsung-s22,Valid
+E2_180deg_SA01_T04.csv,E2_180deg,Orientation,80,180°,No,SA01,4,True,17,0,15,76.3275,80.25,-3.9225,phone-sa01dd,Galaxy S22,samsung-s22,Valid
+E2_180deg_SA01_T05.csv,E2_180deg,Orientation,80,180°,No,SA01,5,True,17,0,15,76.813,79.88,-3.067,phone-sa01dd,Galaxy S22,samsung-s22,Valid
+E2_180deg_SA02_T01.csv,E2_180deg,Orientation,80,180°,No,SA02,1,True,17,0,15,76.9877,80.4,-3.4123,phone-sa02ee,Galaxy S23,samsung-s23,Valid
+E2_180deg_SA02_T02.csv,E2_180deg,Orientation,80,180°,No,SA02,2,True,17,0,15,76.752,79.82,-3.068,phone-sa02ee,Galaxy S23,samsung-s23,Valid
+E2_180deg_SA02_T03.csv,E2_180deg,Orientation,80,180°,No,SA02,3,True,17,0,15,77.2611,80.0,-2.7389,phone-sa02ee,Galaxy S23,samsung-s23,Valid
+E2_180deg_SA02_T04.csv,E2_180deg,Orientation,80,180°,No,SA02,4,True,17,0,15,76.6407,79.65,-3.0093,phone-sa02ee,Galaxy S23,samsung-s23,Valid
+E2_180deg_SA02_T05.csv,E2_180deg,Orientation,80,180°,No,SA02,5,True,17,0,15,76.6802,79.71,-3.0298,phone-sa02ee,Galaxy S23,samsung-s23,Valid
+E2_180deg_SA03_T01.csv,E2_180deg,Orientation,80,180°,No,SA03,1,True,17,0,15,75.2552,79.93,-4.6748,phone-sa03ff,Galaxy A54,samsung-a54,Valid
+E2_180deg_SA03_T02.csv,E2_180deg,Orientation,80,180°,No,SA03,2,True,17,0,15,75.205,79.97,-4.765,phone-sa03ff,Galaxy A54,samsung-a54,Valid
+E2_180deg_SA03_T03.csv,E2_180deg,Orientation,80,180°,No,SA03,3,True,17,0,15,75.6334,79.77,-4.1366,phone-sa03ff,Galaxy A54,samsung-a54,Valid
+E2_180deg_SA03_T04.csv,E2_180deg,Orientation,80,180°,No,SA03,4,True,17,0,15,75.6575,79.98,-4.3225,phone-sa03ff,Galaxy A54,samsung-a54,Valid
+E2_180deg_SA03_T05.csv,E2_180deg,Orientation,80,180°,No,SA03,5,True,17,0,15,77.1203,80.47,-3.3497,phone-sa03ff,Galaxy A54,samsung-a54,Valid
+E3_Pocket_IP01_T01.csv,E3_Pocket,Pocket obstruction,80,0°,Yes,IP01,1,True,17,0,15,74.738,79.99,-5.252,phone-ip01aa,iPhone 13,iphone-13,Valid
+E3_Pocket_IP01_T02.csv,E3_Pocket,Pocket obstruction,80,0°,Yes,IP01,2,True,17,0,15,74.0346,79.68,-5.6454,phone-ip01aa,iPhone 13,iphone-13,Valid
+E3_Pocket_IP01_T03.csv,E3_Pocket,Pocket obstruction,80,0°,Yes,IP01,3,True,17,0,15,73.8955,79.61,-5.7145,phone-ip01aa,iPhone 13,iphone-13,Valid
+E3_Pocket_IP01_T04.csv,E3_Pocket,Pocket obstruction,80,0°,Yes,IP01,4,True,17,0,15,74.4804,80.38,-5.8996,phone-ip01aa,iPhone 13,iphone-13,Valid
+E3_Pocket_IP01_T05.csv,E3_Pocket,Pocket obstruction,80,0°,Yes,IP01,5,True,17,0,15,74.939,80.38,-5.441,phone-ip01aa,iPhone 13,iphone-13,Valid
+E3_Pocket_IP02_T01.csv,E3_Pocket,Pocket obstruction,80,0°,Yes,IP02,1,True,17,0,15,74.1628,80.29,-6.1272,phone-ip02bb,iPhone 14,iphone-14,Valid
+E3_Pocket_IP02_T02.csv,E3_Pocket,Pocket obstruction,80,0°,Yes,IP02,2,True,17,0,15,73.9809,80.34,-6.3591,phone-ip02bb,iPhone 14,iphone-14,Valid
+E3_Pocket_IP02_T03.csv,E3_Pocket,Pocket obstruction,80,0°,Yes,IP02,3,True,17,0,15,73.6166,79.98,-6.3634,phone-ip02bb,iPhone 14,iphone-14,Valid
+E3_Pocket_IP02_T04.csv,E3_Pocket,Pocket obstruction,80,0°,Yes,IP02,4,True,17,0,15,74.6071,80.1,-5.4929,phone-ip02bb,iPhone 14,iphone-14,Valid
+E3_Pocket_IP02_T05.csv,E3_Pocket,Pocket obstruction,80,0°,Yes,IP02,5,True,17,0,15,73.1205,80.0,-6.8795,phone-ip02bb,iPhone 14,iphone-14,Valid
+E3_Pocket_IP03_T01.csv,E3_Pocket,Pocket obstruction,80,0°,Yes,IP03,1,True,17,0,15,74.2807,80.32,-6.0393,phone-ip03cc,iPhone 15,iphone-15,Valid
+E3_Pocket_IP03_T02.csv,E3_Pocket,Pocket obstruction,80,0°,Yes,IP03,2,True,17,0,15,74.9843,80.34,-5.3557,phone-ip03cc,iPhone 15,iphone-15,Valid
+E3_Pocket_IP03_T03.csv,E3_Pocket,Pocket obstruction,80,0°,Yes,IP03,3,True,17,0,15,73.8819,79.66,-5.7781,phone-ip03cc,iPhone 15,iphone-15,Valid
+E3_Pocket_IP03_T04.csv,E3_Pocket,Pocket obstruction,80,0°,Yes,IP03,4,True,17,0,15,74.0468,79.88,-5.8332,phone-ip03cc,iPhone 15,iphone-15,Valid
+E3_Pocket_IP03_T05.csv,E3_Pocket,Pocket obstruction,80,0°,Yes,IP03,5,True,17,0,15,73.6594,80.2,-6.5406,phone-ip03cc,iPhone 15,iphone-15,Valid
+E3_Pocket_SA01_T01.csv,E3_Pocket,Pocket obstruction,80,0°,Yes,SA01,1,True,17,0,15,73.0973,80.08,-6.9827,phone-sa01dd,Galaxy S22,samsung-s22,Valid
+E3_Pocket_SA01_T02.csv,E3_Pocket,Pocket obstruction,80,0°,Yes,SA01,2,True,17,0,15,73.4811,80.18,-6.6989,phone-sa01dd,Galaxy S22,samsung-s22,Valid
+E3_Pocket_SA01_T03.csv,E3_Pocket,Pocket obstruction,80,0°,Yes,SA01,3,True,17,0,15,72.8243,79.79,-6.9657,phone-sa01dd,Galaxy S22,samsung-s22,Valid
+E3_Pocket_SA01_T04.csv,E3_Pocket,Pocket obstruction,80,0°,Yes,SA01,4,True,17,0,15,73.6413,79.94,-6.2987,phone-sa01dd,Galaxy S22,samsung-s22,Valid
+E3_Pocket_SA01_T05.csv,E3_Pocket,Pocket obstruction,80,0°,Yes,SA01,5,True,17,0,15,73.9175,80.26,-6.3425,phone-sa01dd,Galaxy S22,samsung-s22,Valid
+E3_Pocket_SA02_T01.csv,E3_Pocket,Pocket obstruction,80,0°,Yes,SA02,1,True,17,0,15,74.4683,79.77,-5.3017,phone-sa02ee,Galaxy S23,samsung-s23,Valid
+E3_Pocket_SA02_T02.csv,E3_Pocket,Pocket obstruction,80,0°,Yes,SA02,2,True,17,0,15,74.6386,79.45,-4.8114,phone-sa02ee,Galaxy S23,samsung-s23,Valid
+E3_Pocket_SA02_T03.csv,E3_Pocket,Pocket obstruction,80,0°,Yes,SA02,3,True,17,0,15,74.8927,80.18,-5.2873,phone-sa02ee,Galaxy S23,samsung-s23,Valid
+E3_Pocket_SA02_T04.csv,E3_Pocket,Pocket obstruction,80,0°,Yes,SA02,4,True,17,0,15,74.4649,79.78,-5.3151,phone-sa02ee,Galaxy S23,samsung-s23,Valid
+E3_Pocket_SA02_T05.csv,E3_Pocket,Pocket obstruction,80,0°,Yes,SA02,5,True,17,0,15,74.4581,80.02,-5.5619,phone-sa02ee,Galaxy S23,samsung-s23,Valid
+E3_Pocket_SA03_T01.csv,E3_Pocket,Pocket obstruction,80,0°,Yes,SA03,1,True,17,0,15,73.6073,80.14,-6.5327,phone-sa03ff,Galaxy A54,samsung-a54,Valid
+E3_Pocket_SA03_T02.csv,E3_Pocket,Pocket obstruction,80,0°,Yes,SA03,2,True,17,0,15,73.0588,80.15,-7.0912,phone-sa03ff,Galaxy A54,samsung-a54,Valid
+E3_Pocket_SA03_T03.csv,E3_Pocket,Pocket obstruction,80,0°,Yes,SA03,3,True,17,0,15,73.6985,80.14,-6.4415,phone-sa03ff,Galaxy A54,samsung-a54,Valid
+E3_Pocket_SA03_T04.csv,E3_Pocket,Pocket obstruction,80,0°,Yes,SA03,4,True,17,0,15,73.7565,80.19,-6.4335,phone-sa03ff,Galaxy A54,samsung-a54,Valid
+E3_Pocket_SA03_T05.csv,E3_Pocket,Pocket obstruction,80,0°,Yes,SA03,5,True,17,0,15,72.5748,80.02,-7.4452,phone-sa03ff,Galaxy A54,samsung-a54,Valid

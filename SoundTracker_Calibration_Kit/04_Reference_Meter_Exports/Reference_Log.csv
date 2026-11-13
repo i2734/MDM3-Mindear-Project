@@ -1,0 +1,181 @@
+Filename,Condition_Folder,Experiment,Target_Level_dBA,Orientation,Pocket,Phone_ID,Trial,Ref_LAeq_dB,Ref_Before_dB,Ref_After_dB,Source_Export_File,Window_Start_UTC,Window_End_UTC,Notes
+E1_65dB_IP01_T01.csv,E1_65dB,Intensity,65,0°,No,IP01,1,64.75,,,,,,Synthetic test data
+E1_65dB_IP01_T02.csv,E1_65dB,Intensity,65,0°,No,IP01,2,65.08,,,,,,Synthetic test data
+E1_65dB_IP01_T03.csv,E1_65dB,Intensity,65,0°,No,IP01,3,65.25,,,,,,Synthetic test data
+E1_65dB_IP01_T04.csv,E1_65dB,Intensity,65,0°,No,IP01,4,64.63,,,,,,Synthetic test data
+E1_65dB_IP01_T05.csv,E1_65dB,Intensity,65,0°,No,IP01,5,64.88,,,,,,Synthetic test data
+E1_65dB_IP02_T01.csv,E1_65dB,Intensity,65,0°,No,IP02,1,64.69,,,,,,Synthetic test data
+E1_65dB_IP02_T02.csv,E1_65dB,Intensity,65,0°,No,IP02,2,64.84,,,,,,Synthetic test data
+E1_65dB_IP02_T03.csv,E1_65dB,Intensity,65,0°,No,IP02,3,65.43,,,,,,Synthetic test data
+E1_65dB_IP02_T04.csv,E1_65dB,Intensity,65,0°,No,IP02,4,64.74,,,,,,Synthetic test data
+E1_65dB_IP02_T05.csv,E1_65dB,Intensity,65,0°,No,IP02,5,64.82,,,,,,Synthetic test data
+E1_65dB_IP03_T01.csv,E1_65dB,Intensity,65,0°,No,IP03,1,65.12,,,,,,Synthetic test data
+E1_65dB_IP03_T02.csv,E1_65dB,Intensity,65,0°,No,IP03,2,65.28,,,,,,Synthetic test data
+E1_65dB_IP03_T03.csv,E1_65dB,Intensity,65,0°,No,IP03,3,64.97,,,,,,Synthetic test data
+E1_65dB_IP03_T04.csv,E1_65dB,Intensity,65,0°,No,IP03,4,65.02,,,,,,Synthetic test data
+E1_65dB_IP03_T05.csv,E1_65dB,Intensity,65,0°,No,IP03,5,64.82,,,,,,Synthetic test data
+E1_65dB_SA01_T01.csv,E1_65dB,Intensity,65,0°,No,SA01,1,64.83,,,,,,Synthetic test data
+E1_65dB_SA01_T02.csv,E1_65dB,Intensity,65,0°,No,SA01,2,65.02,,,,,,Synthetic test data
+E1_65dB_SA01_T03.csv,E1_65dB,Intensity,65,0°,No,SA01,3,65.1,,,,,,Synthetic test data
+E1_65dB_SA01_T04.csv,E1_65dB,Intensity,65,0°,No,SA01,4,65.51,,,,,,Synthetic test data
+E1_65dB_SA01_T05.csv,E1_65dB,Intensity,65,0°,No,SA01,5,65.01,,,,,,Synthetic test data
+E1_65dB_SA02_T01.csv,E1_65dB,Intensity,65,0°,No,SA02,1,65.25,,,,,,Synthetic test data
+E1_65dB_SA02_T02.csv,E1_65dB,Intensity,65,0°,No,SA02,2,65.18,,,,,,Synthetic test data
+E1_65dB_SA02_T03.csv,E1_65dB,Intensity,65,0°,No,SA02,3,64.83,,,,,,Synthetic test data
+E1_65dB_SA02_T04.csv,E1_65dB,Intensity,65,0°,No,SA02,4,64.77,,,,,,Synthetic test data
+E1_65dB_SA02_T05.csv,E1_65dB,Intensity,65,0°,No,SA02,5,65.24,,,,,,Synthetic test data
+E1_65dB_SA03_T01.csv,E1_65dB,Intensity,65,0°,No,SA03,1,65.08,,,,,,Synthetic test data
+E1_65dB_SA03_T02.csv,E1_65dB,Intensity,65,0°,No,SA03,2,64.99,,,,,,Synthetic test data
+E1_65dB_SA03_T03.csv,E1_65dB,Intensity,65,0°,No,SA03,3,65.02,,,,,,Synthetic test data
+E1_65dB_SA03_T04.csv,E1_65dB,Intensity,65,0°,No,SA03,4,65.06,,,,,,Synthetic test data
+E1_65dB_SA03_T05.csv,E1_65dB,Intensity,65,0°,No,SA03,5,64.73,,,,,,Synthetic test data
+E1_80dB_IP01_T01.csv,E1_80dB,Intensity,80,0°,No,IP01,1,80.06,,,,,,Synthetic test data
+E1_80dB_IP01_T02.csv,E1_80dB,Intensity,80,0°,No,IP01,2,79.32,,,,,,Synthetic test data
+E1_80dB_IP01_T03.csv,E1_80dB,Intensity,80,0°,No,IP01,3,79.79,,,,,,Synthetic test data
+E1_80dB_IP01_T04.csv,E1_80dB,Intensity,80,0°,No,IP01,4,79.7,,,,,,Synthetic test data
+E1_80dB_IP01_T05.csv,E1_80dB,Intensity,80,0°,No,IP01,5,80.01,,,,,,Synthetic test data
+E1_80dB_IP02_T01.csv,E1_80dB,Intensity,80,0°,No,IP02,1,79.67,,,,,,Synthetic test data
+E1_80dB_IP02_T02.csv,E1_80dB,Intensity,80,0°,No,IP02,2,79.83,,,,,,Synthetic test data
+E1_80dB_IP02_T03.csv,E1_80dB,Intensity,80,0°,No,IP02,3,79.96,,,,,,Synthetic test data
+E1_80dB_IP02_T04.csv,E1_80dB,Intensity,80,0°,No,IP02,4,79.8,,,,,,Synthetic test data
+E1_80dB_IP02_T05.csv,E1_80dB,Intensity,80,0°,No,IP02,5,79.78,,,,,,Synthetic test data
+E1_80dB_IP03_T01.csv,E1_80dB,Intensity,80,0°,No,IP03,1,80.15,,,,,,Synthetic test data
+E1_80dB_IP03_T02.csv,E1_80dB,Intensity,80,0°,No,IP03,2,79.98,,,,,,Synthetic test data
+E1_80dB_IP03_T03.csv,E1_80dB,Intensity,80,0°,No,IP03,3,80.23,,,,,,Synthetic test data
+E1_80dB_IP03_T04.csv,E1_80dB,Intensity,80,0°,No,IP03,4,80.14,,,,,,Synthetic test data
+E1_80dB_IP03_T05.csv,E1_80dB,Intensity,80,0°,No,IP03,5,80.05,,,,,,Synthetic test data
+E1_80dB_SA01_T01.csv,E1_80dB,Intensity,80,0°,No,SA01,1,79.87,,,,,,Synthetic test data
+E1_80dB_SA01_T02.csv,E1_80dB,Intensity,80,0°,No,SA01,2,79.64,,,,,,Synthetic test data
+E1_80dB_SA01_T03.csv,E1_80dB,Intensity,80,0°,No,SA01,3,79.97,,,,,,Synthetic test data
+E1_80dB_SA01_T04.csv,E1_80dB,Intensity,80,0°,No,SA01,4,80.01,,,,,,Synthetic test data
+E1_80dB_SA01_T05.csv,E1_80dB,Intensity,80,0°,No,SA01,5,79.79,,,,,,Synthetic test data
+E1_80dB_SA02_T01.csv,E1_80dB,Intensity,80,0°,No,SA02,1,80.49,,,,,,Synthetic test data
+E1_80dB_SA02_T02.csv,E1_80dB,Intensity,80,0°,No,SA02,2,80.15,,,,,,Synthetic test data
+E1_80dB_SA02_T03.csv,E1_80dB,Intensity,80,0°,No,SA02,3,79.72,,,,,,Synthetic test data
+E1_80dB_SA02_T04.csv,E1_80dB,Intensity,80,0°,No,SA02,4,80.01,,,,,,Synthetic test data
+E1_80dB_SA02_T05.csv,E1_80dB,Intensity,80,0°,No,SA02,5,80.05,,,,,,Synthetic test data
+E1_80dB_SA03_T01.csv,E1_80dB,Intensity,80,0°,No,SA03,1,79.88,,,,,,Synthetic test data
+E1_80dB_SA03_T02.csv,E1_80dB,Intensity,80,0°,No,SA03,2,80.16,,,,,,Synthetic test data
+E1_80dB_SA03_T03.csv,E1_80dB,Intensity,80,0°,No,SA03,3,79.95,,,,,,Synthetic test data
+E1_80dB_SA03_T04.csv,E1_80dB,Intensity,80,0°,No,SA03,4,79.73,,,,,,Synthetic test data
+E1_80dB_SA03_T05.csv,E1_80dB,Intensity,80,0°,No,SA03,5,80.01,,,,,,Synthetic test data
+E1_95dB_IP01_T01.csv,E1_95dB,Intensity,95,0°,No,IP01,1,94.78,,,,,,Synthetic test data
+E1_95dB_IP01_T02.csv,E1_95dB,Intensity,95,0°,No,IP01,2,95.22,,,,,,Synthetic test data
+E1_95dB_IP01_T03.csv,E1_95dB,Intensity,95,0°,No,IP01,3,94.88,,,,,,Synthetic test data
+E1_95dB_IP01_T04.csv,E1_95dB,Intensity,95,0°,No,IP01,4,94.56,,,,,,Synthetic test data
+E1_95dB_IP01_T05.csv,E1_95dB,Intensity,95,0°,No,IP01,5,94.93,,,,,,Synthetic test data
+E1_95dB_IP02_T01.csv,E1_95dB,Intensity,95,0°,No,IP02,1,95.19,,,,,,Synthetic test data
+E1_95dB_IP02_T02.csv,E1_95dB,Intensity,95,0°,No,IP02,2,95.31,,,,,,Synthetic test data
+E1_95dB_IP02_T03.csv,E1_95dB,Intensity,95,0°,No,IP02,3,94.87,,,,,,Synthetic test data
+E1_95dB_IP02_T04.csv,E1_95dB,Intensity,95,0°,No,IP02,4,94.73,,,,,,Synthetic test data
+E1_95dB_IP02_T05.csv,E1_95dB,Intensity,95,0°,No,IP02,5,95.56,,,,,,Synthetic test data
+E1_95dB_IP03_T01.csv,E1_95dB,Intensity,95,0°,No,IP03,1,95.16,,,,,,Synthetic test data
+E1_95dB_IP03_T02.csv,E1_95dB,Intensity,95,0°,No,IP03,2,94.35,,,,,,Synthetic test data
+E1_95dB_IP03_T03.csv,E1_95dB,Intensity,95,0°,No,IP03,3,94.73,,,,,,Synthetic test data
+E1_95dB_IP03_T04.csv,E1_95dB,Intensity,95,0°,No,IP03,4,94.96,,,,,,Synthetic test data
+E1_95dB_IP03_T05.csv,E1_95dB,Intensity,95,0°,No,IP03,5,94.79,,,,,,Synthetic test data
+E1_95dB_SA01_T01.csv,E1_95dB,Intensity,95,0°,No,SA01,1,95.33,,,,,,Synthetic test data
+E1_95dB_SA01_T02.csv,E1_95dB,Intensity,95,0°,No,SA01,2,94.96,,,,,,Synthetic test data
+E1_95dB_SA01_T03.csv,E1_95dB,Intensity,95,0°,No,SA01,3,94.62,,,,,,Synthetic test data
+E1_95dB_SA01_T04.csv,E1_95dB,Intensity,95,0°,No,SA01,4,94.57,,,,,,Synthetic test data
+E1_95dB_SA01_T05.csv,E1_95dB,Intensity,95,0°,No,SA01,5,95.06,,,,,,Synthetic test data
+E1_95dB_SA02_T01.csv,E1_95dB,Intensity,95,0°,No,SA02,1,94.82,,,,,,Synthetic test data
+E1_95dB_SA02_T02.csv,E1_95dB,Intensity,95,0°,No,SA02,2,95.23,,,,,,Synthetic test data
+E1_95dB_SA02_T03.csv,E1_95dB,Intensity,95,0°,No,SA02,3,94.69,,,,,,Synthetic test data
+E1_95dB_SA02_T04.csv,E1_95dB,Intensity,95,0°,No,SA02,4,95.44,,,,,,Synthetic test data
+E1_95dB_SA02_T05.csv,E1_95dB,Intensity,95,0°,No,SA02,5,94.93,,,,,,Synthetic test data
+E1_95dB_SA03_T01.csv,E1_95dB,Intensity,95,0°,No,SA03,1,95.53,,,,,,Synthetic test data
+E1_95dB_SA03_T02.csv,E1_95dB,Intensity,95,0°,No,SA03,2,95.1,,,,,,Synthetic test data
+E1_95dB_SA03_T03.csv,E1_95dB,Intensity,95,0°,No,SA03,3,95.44,,,,,,Synthetic test data
+E1_95dB_SA03_T04.csv,E1_95dB,Intensity,95,0°,No,SA03,4,95.07,,,,,,Synthetic test data
+E1_95dB_SA03_T05.csv,E1_95dB,Intensity,95,0°,No,SA03,5,95.05,,,,,,Synthetic test data
+E2_90deg_IP01_T01.csv,E2_90deg,Orientation,80,90°,No,IP01,1,80.15,,,,,,Synthetic test data
+E2_90deg_IP01_T02.csv,E2_90deg,Orientation,80,90°,No,IP01,2,79.67,,,,,,Synthetic test data
+E2_90deg_IP01_T03.csv,E2_90deg,Orientation,80,90°,No,IP01,3,80.17,,,,,,Synthetic test data
+E2_90deg_IP01_T04.csv,E2_90deg,Orientation,80,90°,No,IP01,4,79.71,,,,,,Synthetic test data
+E2_90deg_IP01_T05.csv,E2_90deg,Orientation,80,90°,No,IP01,5,80.25,,,,,,Synthetic test data
+E2_90deg_IP02_T01.csv,E2_90deg,Orientation,80,90°,No,IP02,1,80.16,,,,,,Synthetic test data
+E2_90deg_IP02_T02.csv,E2_90deg,Orientation,80,90°,No,IP02,2,80.37,,,,,,Synthetic test data
+E2_90deg_IP02_T03.csv,E2_90deg,Orientation,80,90°,No,IP02,3,79.84,,,,,,Synthetic test data
+E2_90deg_IP02_T04.csv,E2_90deg,Orientation,80,90°,No,IP02,4,79.53,,,,,,Synthetic test data
+E2_90deg_IP02_T05.csv,E2_90deg,Orientation,80,90°,No,IP02,5,79.89,,,,,,Synthetic test data
+E2_90deg_IP03_T01.csv,E2_90deg,Orientation,80,90°,No,IP03,1,79.57,,,,,,Synthetic test data
+E2_90deg_IP03_T02.csv,E2_90deg,Orientation,80,90°,No,IP03,2,80.4,,,,,,Synthetic test data
+E2_90deg_IP03_T03.csv,E2_90deg,Orientation,80,90°,No,IP03,3,79.74,,,,,,Synthetic test data
+E2_90deg_IP03_T04.csv,E2_90deg,Orientation,80,90°,No,IP03,4,80.06,,,,,,Synthetic test data
+E2_90deg_IP03_T05.csv,E2_90deg,Orientation,80,90°,No,IP03,5,79.65,,,,,,Synthetic test data
+E2_90deg_SA01_T01.csv,E2_90deg,Orientation,80,90°,No,SA01,1,79.77,,,,,,Synthetic test data
+E2_90deg_SA01_T02.csv,E2_90deg,Orientation,80,90°,No,SA01,2,80.21,,,,,,Synthetic test data
+E2_90deg_SA01_T03.csv,E2_90deg,Orientation,80,90°,No,SA01,3,79.68,,,,,,Synthetic test data
+E2_90deg_SA01_T04.csv,E2_90deg,Orientation,80,90°,No,SA01,4,79.81,,,,,,Synthetic test data
+E2_90deg_SA01_T05.csv,E2_90deg,Orientation,80,90°,No,SA01,5,80.14,,,,,,Synthetic test data
+E2_90deg_SA02_T01.csv,E2_90deg,Orientation,80,90°,No,SA02,1,79.86,,,,,,Synthetic test data
+E2_90deg_SA02_T02.csv,E2_90deg,Orientation,80,90°,No,SA02,2,79.57,,,,,,Synthetic test data
+E2_90deg_SA02_T03.csv,E2_90deg,Orientation,80,90°,No,SA02,3,80.37,,,,,,Synthetic test data
+E2_90deg_SA02_T04.csv,E2_90deg,Orientation,80,90°,No,SA02,4,80.18,,,,,,Synthetic test data
+E2_90deg_SA02_T05.csv,E2_90deg,Orientation,80,90°,No,SA02,5,79.97,,,,,,Synthetic test data
+E2_90deg_SA03_T01.csv,E2_90deg,Orientation,80,90°,No,SA03,1,79.97,,,,,,Synthetic test data
+E2_90deg_SA03_T02.csv,E2_90deg,Orientation,80,90°,No,SA03,2,80.67,,,,,,Synthetic test data
+E2_90deg_SA03_T03.csv,E2_90deg,Orientation,80,90°,No,SA03,3,80.12,,,,,,Synthetic test data
+E2_90deg_SA03_T04.csv,E2_90deg,Orientation,80,90°,No,SA03,4,79.84,,,,,,Synthetic test data
+E2_90deg_SA03_T05.csv,E2_90deg,Orientation,80,90°,No,SA03,5,79.92,,,,,,Synthetic test data
+E2_180deg_IP01_T01.csv,E2_180deg,Orientation,80,180°,No,IP01,1,80.0,,,,,,Synthetic test data
+E2_180deg_IP01_T02.csv,E2_180deg,Orientation,80,180°,No,IP01,2,80.03,,,,,,Synthetic test data
+E2_180deg_IP01_T03.csv,E2_180deg,Orientation,80,180°,No,IP01,3,80.45,,,,,,Synthetic test data
+E2_180deg_IP01_T04.csv,E2_180deg,Orientation,80,180°,No,IP01,4,79.84,,,,,,Synthetic test data
+E2_180deg_IP01_T05.csv,E2_180deg,Orientation,80,180°,No,IP01,5,79.7,,,,,,Synthetic test data
+E2_180deg_IP02_T01.csv,E2_180deg,Orientation,80,180°,No,IP02,1,79.96,,,,,,Synthetic test data
+E2_180deg_IP02_T02.csv,E2_180deg,Orientation,80,180°,No,IP02,2,79.67,,,,,,Synthetic test data
+E2_180deg_IP02_T03.csv,E2_180deg,Orientation,80,180°,No,IP02,3,80.38,,,,,,Synthetic test data
+E2_180deg_IP02_T04.csv,E2_180deg,Orientation,80,180°,No,IP02,4,80.15,,,,,,Synthetic test data
+E2_180deg_IP02_T05.csv,E2_180deg,Orientation,80,180°,No,IP02,5,80.18,,,,,,Synthetic test data
+E2_180deg_IP03_T01.csv,E2_180deg,Orientation,80,180°,No,IP03,1,80.12,,,,,,Synthetic test data
+E2_180deg_IP03_T02.csv,E2_180deg,Orientation,80,180°,No,IP03,2,80.19,,,,,,Synthetic test data
+E2_180deg_IP03_T03.csv,E2_180deg,Orientation,80,180°,No,IP03,3,79.77,,,,,,Synthetic test data
+E2_180deg_IP03_T04.csv,E2_180deg,Orientation,80,180°,No,IP03,4,80.33,,,,,,Synthetic test data
+E2_180deg_IP03_T05.csv,E2_180deg,Orientation,80,180°,No,IP03,5,79.67,,,,,,Synthetic test data
+E2_180deg_SA01_T01.csv,E2_180deg,Orientation,80,180°,No,SA01,1,79.81,,,,,,Synthetic test data
+E2_180deg_SA01_T02.csv,E2_180deg,Orientation,80,180°,No,SA01,2,80.14,,,,,,Synthetic test data
+E2_180deg_SA01_T03.csv,E2_180deg,Orientation,80,180°,No,SA01,3,80.29,,,,,,Synthetic test data
+E2_180deg_SA01_T04.csv,E2_180deg,Orientation,80,180°,No,SA01,4,80.25,,,,,,Synthetic test data
+E2_180deg_SA01_T05.csv,E2_180deg,Orientation,80,180°,No,SA01,5,79.88,,,,,,Synthetic test data
+E2_180deg_SA02_T01.csv,E2_180deg,Orientation,80,180°,No,SA02,1,80.4,,,,,,Synthetic test data
+E2_180deg_SA02_T02.csv,E2_180deg,Orientation,80,180°,No,SA02,2,79.82,,,,,,Synthetic test data
+E2_180deg_SA02_T03.csv,E2_180deg,Orientation,80,180°,No,SA02,3,80.0,,,,,,Synthetic test data
+E2_180deg_SA02_T04.csv,E2_180deg,Orientation,80,180°,No,SA02,4,79.65,,,,,,Synthetic test data
+E2_180deg_SA02_T05.csv,E2_180deg,Orientation,80,180°,No,SA02,5,79.71,,,,,,Synthetic test data
+E2_180deg_SA03_T01.csv,E2_180deg,Orientation,80,180°,No,SA03,1,79.93,,,,,,Synthetic test data
+E2_180deg_SA03_T02.csv,E2_180deg,Orientation,80,180°,No,SA03,2,79.97,,,,,,Synthetic test data
+E2_180deg_SA03_T03.csv,E2_180deg,Orientation,80,180°,No,SA03,3,79.77,,,,,,Synthetic test data
+E2_180deg_SA03_T04.csv,E2_180deg,Orientation,80,180°,No,SA03,4,79.98,,,,,,Synthetic test data
+E2_180deg_SA03_T05.csv,E2_180deg,Orientation,80,180°,No,SA03,5,80.47,,,,,,Synthetic test data
+E3_Pocket_IP01_T01.csv,E3_Pocket,Pocket obstruction,80,0°,Yes,IP01,1,79.99,,,,,,Synthetic test data
+E3_Pocket_IP01_T02.csv,E3_Pocket,Pocket obstruction,80,0°,Yes,IP01,2,79.68,,,,,,Synthetic test data
+E3_Pocket_IP01_T03.csv,E3_Pocket,Pocket obstruction,80,0°,Yes,IP01,3,79.61,,,,,,Synthetic test data
+E3_Pocket_IP01_T04.csv,E3_Pocket,Pocket obstruction,80,0°,Yes,IP01,4,80.38,,,,,,Synthetic test data
+E3_Pocket_IP01_T05.csv,E3_Pocket,Pocket obstruction,80,0°,Yes,IP01,5,80.38,,,,,,Synthetic test data
+E3_Pocket_IP02_T01.csv,E3_Pocket,Pocket obstruction,80,0°,Yes,IP02,1,80.29,,,,,,Synthetic test data
+E3_Pocket_IP02_T02.csv,E3_Pocket,Pocket obstruction,80,0°,Yes,IP02,2,80.34,,,,,,Synthetic test data
+E3_Pocket_IP02_T03.csv,E3_Pocket,Pocket obstruction,80,0°,Yes,IP02,3,79.98,,,,,,Synthetic test data
+E3_Pocket_IP02_T04.csv,E3_Pocket,Pocket obstruction,80,0°,Yes,IP02,4,80.1,,,,,,Synthetic test data
+E3_Pocket_IP02_T05.csv,E3_Pocket,Pocket obstruction,80,0°,Yes,IP02,5,80.0,,,,,,Synthetic test data
+E3_Pocket_IP03_T01.csv,E3_Pocket,Pocket obstruction,80,0°,Yes,IP03,1,80.32,,,,,,Synthetic test data
+E3_Pocket_IP03_T02.csv,E3_Pocket,Pocket obstruction,80,0°,Yes,IP03,2,80.34,,,,,,Synthetic test data
+E3_Pocket_IP03_T03.csv,E3_Pocket,Pocket obstruction,80,0°,Yes,IP03,3,79.66,,,,,,Synthetic test data
+E3_Pocket_IP03_T04.csv,E3_Pocket,Pocket obstruction,80,0°,Yes,IP03,4,79.88,,,,,,Synthetic test data
+E3_Pocket_IP03_T05.csv,E3_Pocket,Pocket obstruction,80,0°,Yes,IP03,5,80.2,,,,,,Synthetic test data
+E3_Pocket_SA01_T01.csv,E3_Pocket,Pocket obstruction,80,0°,Yes,SA01,1,80.08,,,,,,Synthetic test data
+E3_Pocket_SA01_T02.csv,E3_Pocket,Pocket obstruction,80,0°,Yes,SA01,2,80.18,,,,,,Synthetic test data
+E3_Pocket_SA01_T03.csv,E3_Pocket,Pocket obstruction,80,0°,Yes,SA01,3,79.79,,,,,,Synthetic test data
+E3_Pocket_SA01_T04.csv,E3_Pocket,Pocket obstruction,80,0°,Yes,SA01,4,79.94,,,,,,Synthetic test data
+E3_Pocket_SA01_T05.csv,E3_Pocket,Pocket obstruction,80,0°,Yes,SA01,5,80.26,,,,,,Synthetic test data
+E3_Pocket_SA02_T01.csv,E3_Pocket,Pocket obstruction,80,0°,Yes,SA02,1,79.77,,,,,,Synthetic test data
+E3_Pocket_SA02_T02.csv,E3_Pocket,Pocket obstruction,80,0°,Yes,SA02,2,79.45,,,,,,Synthetic test data
+E3_Pocket_SA02_T03.csv,E3_Pocket,Pocket obstruction,80,0°,Yes,SA02,3,80.18,,,,,,Synthetic test data
+E3_Pocket_SA02_T04.csv,E3_Pocket,Pocket obstruction,80,0°,Yes,SA02,4,79.78,,,,,,Synthetic test data
+E3_Pocket_SA02_T05.csv,E3_Pocket,Pocket obstruction,80,0°,Yes,SA02,5,80.02,,,,,,Synthetic test data
+E3_Pocket_SA03_T01.csv,E3_Pocket,Pocket obstruction,80,0°,Yes,SA03,1,80.14,,,,,,Synthetic test data
+E3_Pocket_SA03_T02.csv,E3_Pocket,Pocket obstruction,80,0°,Yes,SA03,2,80.15,,,,,,Synthetic test data
+E3_Pocket_SA03_T03.csv,E3_Pocket,Pocket obstruction,80,0°,Yes,SA03,3,80.14,,,,,,Synthetic test data
+E3_Pocket_SA03_T04.csv,E3_Pocket,Pocket obstruction,80,0°,Yes,SA03,4,80.19,,,,,,Synthetic test data
+E3_Pocket_SA03_T05.csv,E3_Pocket,Pocket obstruction,80,0°,Yes,SA03,5,80.02,,,,,,Synthetic test data

@@ -1,0 +1,18 @@
+recorded_at,event_id,contributor_bucket,lat,lon,accuracy_m,laeq_db,lamax_db,integration_seconds,calibration_offset_db,uploaded,invite,phone_model,device_class,consent_version
+2026-11-10T10:00:01.000Z,calib-e1_80db,phone-ip03cc,51.4545,-2.5879,5.0,79.47,83.67,1,0,True,lab01,iPhone 15,iphone-15,phase3-draft-1
+2026-11-10T10:00:02.000Z,calib-e1_80db,phone-ip03cc,51.4545,-2.5879,5.0,78.14,82.34,1,0,True,lab01,iPhone 15,iphone-15,phase3-draft-1
+2026-11-10T10:00:03.000Z,calib-e1_80db,phone-ip03cc,51.4545,-2.5879,5.0,78.61,82.81,1,0,True,lab01,iPhone 15,iphone-15,phase3-draft-1
+2026-11-10T10:00:04.000Z,calib-e1_80db,phone-ip03cc,51.4545,-2.5879,5.0,78.72,82.92,1,0,True,lab01,iPhone 15,iphone-15,phase3-draft-1
+2026-11-10T10:00:05.000Z,calib-e1_80db,phone-ip03cc,51.4545,-2.5879,5.0,78.5,82.7,1,0,True,lab01,iPhone 15,iphone-15,phase3-draft-1
+2026-11-10T10:00:06.000Z,calib-e1_80db,phone-ip03cc,51.4545,-2.5879,5.0,78.72,82.92,1,0,True,lab01,iPhone 15,iphone-15,phase3-draft-1
+2026-11-10T10:00:07.000Z,calib-e1_80db,phone-ip03cc,51.4545,-2.5879,5.0,78.95,83.15,1,0,True,lab01,iPhone 15,iphone-15,phase3-draft-1
+2026-11-10T10:00:08.000Z,calib-e1_80db,phone-ip03cc,51.4545,-2.5879,5.0,79.23,83.43,1,0,True,lab01,iPhone 15,iphone-15,phase3-draft-1
+2026-11-10T10:00:09.000Z,calib-e1_80db,phone-ip03cc,51.4545,-2.5879,5.0,78.77,82.97,1,0,True,lab01,iPhone 15,iphone-15,phase3-draft-1
+2026-11-10T10:00:10.000Z,calib-e1_80db,phone-ip03cc,51.4545,-2.5879,5.0,78.71,82.91,1,0,True,lab01,iPhone 15,iphone-15,phase3-draft-1
+2026-11-10T10:00:11.000Z,calib-e1_80db,phone-ip03cc,51.4545,-2.5879,5.0,78.84,83.04,1,0,True,lab01,iPhone 15,iphone-15,phase3-draft-1
+2026-11-10T10:00:12.000Z,calib-e1_80db,phone-ip03cc,51.4545,-2.5879,5.0,78.73,82.93,1,0,True,lab01,iPhone 15,iphone-15,phase3-draft-1
+2026-11-10T10:00:13.000Z,calib-e1_80db,phone-ip03cc,51.4545,-2.5879,5.0,78.45,82.65,1,0,True,lab01,iPhone 15,iphone-15,phase3-draft-1
+2026-11-10T10:00:14.000Z,calib-e1_80db,phone-ip03cc,51.4545,-2.5879,5.0,78.72,82.92,1,0,True,lab01,iPhone 15,iphone-15,phase3-draft-1
+2026-11-10T10:00:15.000Z,calib-e1_80db,phone-ip03cc,51.4545,-2.5879,5.0,79.15,83.35,1,0,True,lab01,iPhone 15,iphone-15,phase3-draft-1
+2026-11-10T10:00:16.000Z,calib-e1_80db,phone-ip03cc,51.4545,-2.5879,5.0,78.75,82.95,1,0,True,lab01,iPhone 15,iphone-15,phase3-draft-1
+2026-11-10T10:00:17.000Z,calib-e1_80db,phone-ip03cc,51.4545,-2.5879,5.0,78.72,82.92,1,0,True,lab01,iPhone 15,iphone-15,phase3-draft-1

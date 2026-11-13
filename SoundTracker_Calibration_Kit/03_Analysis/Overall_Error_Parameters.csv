@@ -1,0 +1,2 @@
+valid_recordings_M,overall_bias_mu_db,pooled_variance_sigma2_db2,pooled_sd_sigma_db,pure_repeatability_variance_db2,pure_repeatability_sd_db,shapiro_wilk_W,shapiro_wilk_p,recommended_random_seed
+180,-2.5914,3.5624,1.8874,0.165,0.4062,0.9058,0.0,42

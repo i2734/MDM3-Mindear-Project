@@ -1,0 +1,7 @@
+Phone ID,Phone type,Actual model (fill in),Detected_Phone_Model,Contributor_Bucket,Device_Class
+IP01,Apple,,iPhone 13,phone-ip01aa,iphone-13
+IP02,Apple,,iPhone 14,phone-ip02bb,iphone-14
+IP03,Apple,,iPhone 15,phone-ip03cc,iphone-15
+SA01,Samsung,,Galaxy S22,phone-sa01dd,samsung-s22
+SA02,Samsung,,Galaxy S23,phone-sa02ee,samsung-s23
+SA03,Samsung,,Galaxy A54,phone-sa03ff,samsung-a54

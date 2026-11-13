@@ -1,0 +1,16 @@
+recorded_at,event_id,contributor_bucket,lat,lon,accuracy_m,laeq_db,lamax_db,integration_seconds,calibration_offset_db,uploaded,invite,phone_model,device_class,consent_version
+2026-11-10T10:00:02.000Z,calib-e1_95db,phone-sa03ff,51.4545,-2.5879,5.0,92.81,97.01,1,0,True,lab01,Galaxy A54,samsung-a54,phase3-draft-1
+2026-11-10T10:00:03.000Z,calib-e1_95db,phone-sa03ff,51.4545,-2.5879,5.0,92.7,96.9,1,0,True,lab01,Galaxy A54,samsung-a54,phase3-draft-1
+2026-11-10T10:00:04.000Z,calib-e1_95db,phone-sa03ff,51.4545,-2.5879,5.0,91.66,95.86,1,0,True,lab01,Galaxy A54,samsung-a54,phase3-draft-1
+2026-11-10T10:00:05.000Z,calib-e1_95db,phone-sa03ff,51.4545,-2.5879,5.0,92.74,96.94,1,0,True,lab01,Galaxy A54,samsung-a54,phase3-draft-1
+2026-11-10T10:00:06.000Z,calib-e1_95db,phone-sa03ff,51.4545,-2.5879,5.0,92.44,96.64,1,0,True,lab01,Galaxy A54,samsung-a54,phase3-draft-1
+2026-11-10T10:00:07.000Z,calib-e1_95db,phone-sa03ff,51.4545,-2.5879,5.0,93.13,97.33,1,0,True,lab01,Galaxy A54,samsung-a54,phase3-draft-1
+2026-11-10T10:00:08.000Z,calib-e1_95db,phone-sa03ff,51.4545,-2.5879,5.0,92.53,96.73,1,0,True,lab01,Galaxy A54,samsung-a54,phase3-draft-1
+2026-11-10T10:00:09.000Z,calib-e1_95db,phone-sa03ff,51.4545,-2.5879,5.0,92.05,96.25,1,0,True,lab01,Galaxy A54,samsung-a54,phase3-draft-1
+2026-11-10T10:00:10.000Z,calib-e1_95db,phone-sa03ff,51.4545,-2.5879,5.0,92.36,96.56,1,0,True,lab01,Galaxy A54,samsung-a54,phase3-draft-1
+2026-11-10T10:00:11.000Z,calib-e1_95db,phone-sa03ff,51.4545,-2.5879,5.0,92.39,96.59,1,0,True,lab01,Galaxy A54,samsung-a54,phase3-draft-1
+2026-11-10T10:00:12.000Z,calib-e1_95db,phone-sa03ff,51.4545,-2.5879,5.0,92.68,96.88,1,0,True,lab01,Galaxy A54,samsung-a54,phase3-draft-1
+2026-11-10T10:00:13.000Z,calib-e1_95db,phone-sa03ff,51.4545,-2.5879,5.0,92.45,96.65,1,0,True,lab01,Galaxy A54,samsung-a54,phase3-draft-1
+2026-11-10T10:00:14.000Z,calib-e1_95db,phone-sa03ff,51.4545,-2.5879,5.0,92.95,97.15,1,0,True,lab01,Galaxy A54,samsung-a54,phase3-draft-1
+2026-11-10T10:00:15.000Z,calib-e1_95db,phone-sa03ff,51.4545,-2.5879,5.0,92.82,97.02,1,0,True,lab01,Galaxy A54,samsung-a54,phase3-draft-1
+2026-11-10T10:00:16.000Z,calib-e1_95db,phone-sa03ff,51.4545,-2.5879,5.0,92.35,96.55,1,0,True,lab01,Galaxy A54,samsung-a54,phase3-draft-1

@@ -1,0 +1,16 @@
+recorded_at,event_id,contributor_bucket,lat,lon,accuracy_m,laeq_db,lamax_db,integration_seconds,calibration_offset_db,uploaded,invite,phone_model,device_class,consent_version
+2026-11-10T10:00:02.000Z,calib-e1_95db,phone-sa01dd,51.4545,-2.5879,5.0,91.84,96.04,1,0,True,lab01,Galaxy S22,samsung-s22,phase3-draft-1
+2026-11-10T10:00:03.000Z,calib-e1_95db,phone-sa01dd,51.4545,-2.5879,5.0,91.9,96.1,1,0,True,lab01,Galaxy S22,samsung-s22,phase3-draft-1
+2026-11-10T10:00:04.000Z,calib-e1_95db,phone-sa01dd,51.4545,-2.5879,5.0,92.53,96.73,1,0,True,lab01,Galaxy S22,samsung-s22,phase3-draft-1
+2026-11-10T10:00:05.000Z,calib-e1_95db,phone-sa01dd,51.4545,-2.5879,5.0,92.2,96.4,1,0,True,lab01,Galaxy S22,samsung-s22,phase3-draft-1
+2026-11-10T10:00:06.000Z,calib-e1_95db,phone-sa01dd,51.4545,-2.5879,5.0,92.49,96.69,1,0,True,lab01,Galaxy S22,samsung-s22,phase3-draft-1
+2026-11-10T10:00:07.000Z,calib-e1_95db,phone-sa01dd,51.4545,-2.5879,5.0,92.14,96.34,1,0,True,lab01,Galaxy S22,samsung-s22,phase3-draft-1
+2026-11-10T10:00:08.000Z,calib-e1_95db,phone-sa01dd,51.4545,-2.5879,5.0,92.09,96.29,1,0,True,lab01,Galaxy S22,samsung-s22,phase3-draft-1
+2026-11-10T10:00:09.000Z,calib-e1_95db,phone-sa01dd,51.4545,-2.5879,5.0,91.89,96.09,1,0,True,lab01,Galaxy S22,samsung-s22,phase3-draft-1
+2026-11-10T10:00:10.000Z,calib-e1_95db,phone-sa01dd,51.4545,-2.5879,5.0,91.72,95.92,1,0,True,lab01,Galaxy S22,samsung-s22,phase3-draft-1
+2026-11-10T10:00:11.000Z,calib-e1_95db,phone-sa01dd,51.4545,-2.5879,5.0,92.19,96.39,1,0,True,lab01,Galaxy S22,samsung-s22,phase3-draft-1
+2026-11-10T10:00:12.000Z,calib-e1_95db,phone-sa01dd,51.4545,-2.5879,5.0,92.63,96.83,1,0,True,lab01,Galaxy S22,samsung-s22,phase3-draft-1
+2026-11-10T10:00:13.000Z,calib-e1_95db,phone-sa01dd,51.4545,-2.5879,5.0,92.11,96.31,1,0,True,lab01,Galaxy S22,samsung-s22,phase3-draft-1
+2026-11-10T10:00:14.000Z,calib-e1_95db,phone-sa01dd,51.4545,-2.5879,5.0,92.4,96.6,1,0,True,lab01,Galaxy S22,samsung-s22,phase3-draft-1
+2026-11-10T10:00:15.000Z,calib-e1_95db,phone-sa01dd,51.4545,-2.5879,5.0,91.79,95.99,1,0,True,lab01,Galaxy S22,samsung-s22,phase3-draft-1
+2026-11-10T10:00:16.000Z,calib-e1_95db,phone-sa01dd,51.4545,-2.5879,5.0,92.02,96.22,1,0,True,lab01,Galaxy S22,samsung-s22,phase3-draft-1

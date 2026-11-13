@@ -23,6 +23,8 @@ class ExactAcousticKriging:
             safety_margin_db: float, maximum dB cushion added in unmeasured dead zones.
                           Scales smoothly with spatial uncertainty (0 dB at phones, 
                           up to safety_margin_db in large gaps).
+                        
+            peak_boost: bool, whether to apply a peak boost to account for missing point sources in the map.
         """
         self.practical_range = practical_range
         self.sill = sill
@@ -112,6 +114,7 @@ class ExactAcousticKriging:
             peak_weights = np.clip((base_db - p90) / (np.max(base_db, axis=1, keepdims=True) - p90 + 1e-6), 0.0, 1.0)  # (T, M)
             base_db = base_db + (expected_headroom * (peak_weights)**2)
 
+        
         #Apply hearing-protection safety buffer
         if self.safety_margin_db > 0.0:
             # Kriging estimation variance: sigma^2 = sum(W_aug * B_aug)

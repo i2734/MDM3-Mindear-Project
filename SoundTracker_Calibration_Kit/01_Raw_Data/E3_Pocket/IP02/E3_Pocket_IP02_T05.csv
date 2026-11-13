@@ -1,0 +1,18 @@
+recorded_at,event_id,contributor_bucket,lat,lon,accuracy_m,laeq_db,lamax_db,integration_seconds,calibration_offset_db,uploaded,invite,phone_model,device_class,consent_version
+2026-11-10T10:00:01.000Z,calib-e3_pocket,phone-ip02bb,51.4545,-2.5879,5.0,73.8,78.0,1,0,True,lab01,iPhone 14,iphone-14,phase3-draft-1
+2026-11-10T10:00:02.000Z,calib-e3_pocket,phone-ip02bb,51.4545,-2.5879,5.0,72.99,77.19,1,0,True,lab01,iPhone 14,iphone-14,phase3-draft-1
+2026-11-10T10:00:03.000Z,calib-e3_pocket,phone-ip02bb,51.4545,-2.5879,5.0,73.33,77.53,1,0,True,lab01,iPhone 14,iphone-14,phase3-draft-1
+2026-11-10T10:00:04.000Z,calib-e3_pocket,phone-ip02bb,51.4545,-2.5879,5.0,73.13,77.33,1,0,True,lab01,iPhone 14,iphone-14,phase3-draft-1
+2026-11-10T10:00:05.000Z,calib-e3_pocket,phone-ip02bb,51.4545,-2.5879,5.0,72.67,76.87,1,0,True,lab01,iPhone 14,iphone-14,phase3-draft-1
+2026-11-10T10:00:06.000Z,calib-e3_pocket,phone-ip02bb,51.4545,-2.5879,5.0,72.48,76.68,1,0,True,lab01,iPhone 14,iphone-14,phase3-draft-1
+2026-11-10T10:00:07.000Z,calib-e3_pocket,phone-ip02bb,51.4545,-2.5879,5.0,73.54,77.74,1,0,True,lab01,iPhone 14,iphone-14,phase3-draft-1
+2026-11-10T10:00:08.000Z,calib-e3_pocket,phone-ip02bb,51.4545,-2.5879,5.0,73.32,77.52,1,0,True,lab01,iPhone 14,iphone-14,phase3-draft-1
+2026-11-10T10:00:09.000Z,calib-e3_pocket,phone-ip02bb,51.4545,-2.5879,5.0,73.76,77.96,1,0,True,lab01,iPhone 14,iphone-14,phase3-draft-1
+2026-11-10T10:00:10.000Z,calib-e3_pocket,phone-ip02bb,51.4545,-2.5879,5.0,73.17,77.37,1,0,True,lab01,iPhone 14,iphone-14,phase3-draft-1
+2026-11-10T10:00:11.000Z,calib-e3_pocket,phone-ip02bb,51.4545,-2.5879,5.0,73.18,77.38,1,0,True,lab01,iPhone 14,iphone-14,phase3-draft-1
+2026-11-10T10:00:12.000Z,calib-e3_pocket,phone-ip02bb,51.4545,-2.5879,5.0,72.97,77.17,1,0,True,lab01,iPhone 14,iphone-14,phase3-draft-1
+2026-11-10T10:00:13.000Z,calib-e3_pocket,phone-ip02bb,51.4545,-2.5879,5.0,72.55,76.75,1,0,True,lab01,iPhone 14,iphone-14,phase3-draft-1
+2026-11-10T10:00:14.000Z,calib-e3_pocket,phone-ip02bb,51.4545,-2.5879,5.0,73.37,77.57,1,0,True,lab01,iPhone 14,iphone-14,phase3-draft-1
+2026-11-10T10:00:15.000Z,calib-e3_pocket,phone-ip02bb,51.4545,-2.5879,5.0,73.03,77.23,1,0,True,lab01,iPhone 14,iphone-14,phase3-draft-1
+2026-11-10T10:00:16.000Z,calib-e3_pocket,phone-ip02bb,51.4545,-2.5879,5.0,73.12,77.32,1,0,True,lab01,iPhone 14,iphone-14,phase3-draft-1
+2026-11-10T10:00:17.000Z,calib-e3_pocket,phone-ip02bb,51.4545,-2.5879,5.0,73.16,77.36,1,0,True,lab01,iPhone 14,iphone-14,phase3-draft-1

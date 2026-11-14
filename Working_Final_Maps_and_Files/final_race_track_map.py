@@ -11,7 +11,7 @@ from matplotlib.path import Path as MplPath
 from scipy.ndimage import binary_closing, binary_fill_holes, binary_erosion, distance_transform_edt
 
 BASE = Path(__file__).resolve().parent
-CSV = BASE / 'synchronised_f1.csv'
+CSV = BASE / 'final_synchronised_f1.csv'
 LW_DB = 133.0
 MIN_DISTANCE_M = 1.0
 FPS = 30
@@ -62,7 +62,7 @@ def build_map():
             energy += source_energy / np.maximum(d2, MIN_DISTANCE_M**2)
         sound_maps[k] = 10 * np.log10(energy)
 
-    track_rgba = plt.imread(BASE / 'f1_track_overlay.png')
+    track_rgba = plt.imread(BASE / 'final_f1_track_overlay.png')
     h, w = track_rgba.shape[:2]
     xx = np.linspace(xmin, xmax, w)
     yy = np.linspace(ymax, ymin, h)

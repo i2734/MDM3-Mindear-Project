@@ -12,7 +12,7 @@ from matplotlib.path import Path as MplPath
 from matplotlib.patches import Circle, Polygon, Rectangle
 import numpy as np
 
-from single_wall import Wall, _intersect_parameters, material_properties
+from final_single_wall import Wall, _intersect_parameters, material_properties
 
 OUT = Path(__file__).resolve().parent
 FREQUENCIES = (125, 250, 500, 1000, 2000, 4000)

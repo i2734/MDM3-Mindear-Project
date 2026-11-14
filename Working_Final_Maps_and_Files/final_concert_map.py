@@ -6,7 +6,7 @@ from functools import lru_cache
 import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib.patches import Rectangle
-from single_wall import Wall, _intersect_parameters, material_properties
+from final_single_wall import Wall, _intersect_parameters, material_properties
 from matplotlib.lines import Line2D
 
 FREQUENCIES = (125, 250, 500, 1000, 2000, 4000)

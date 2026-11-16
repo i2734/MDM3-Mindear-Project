@@ -1,85 +1,85 @@
 # MDM3-Mindear-Project
 
-## Sound Map Models
+## Working Final Maps
 
-Five simulated environments are currently available:
+The `Working_final_maps` folder contains the current sound simulation and data preparation pipeline for the Sound Tracker project.
 
-- **Single stationary source** — one fixed sound source.
-- **Multiple stationary sources** — several fixed sound sources.
-- **Single moving source** — one source moving across the space.
-- **Distributed background noise** — multiple stationary sources with time-varying sound levels.
-- **Concert venue** — a simulated indoor concert environment incorporating directional speakers, wall reflections and acoustic treatments.
+Two simulated environments are available:
 
-Each model generates a sound map over a 2D grid.
+- **Concert venue** — an indoor concert environment with directional speakers, wall reflections and acoustic treatments.
+- **Stadium** — a football stadium environment with crowd noise, chanting, goal celebrations and wall reflections.
 
-### Concert Venue Simulation
+Both models generate simulated sound levels across a 2D grid, which can then be sampled using virtual microphones and passed to an interpolation model.
 
-The concert venue model is inspired by the O2 Academy Bristol and includes:
+### Files and Their Functions
 
-- Two directional speakers and a defined stage area.
-- Inverse-square sound attenuation with distance.
-- First- and second-order specular wall reflections.
-- Frequency-dependent wall absorption using concrete and acoustic panel properties.
-- Comparison of treated and untreated wall configurations.
-- An audience-accessible area restricting microphone placement.
+| File | Purpose |
+|---|---|
+| `concert_map.py` | Generates the concert venue sound map, including speakers, walls and acoustic treatments. |
+| `stadium_map.py` | Generates time-varying stadium sound maps, including crowd activity and reflections. |
+| `single_wall.py` | Provides shared wall geometry and acoustic properties used by the venue simulations. |
+| `extract_sound_venues.py` | Generates microphone positions and extracts sound measurements from either venue. |
+| `visualise_microphone_configurations.py` | Displays microphone placements over the sound map for different configurations. |
+| `test_input_for_interpolate_venue.py` | Demonstrates how to prepare the data for an interpolation model. |
 
-The model calculates unweighted broadband sound pressure levels (SPL) using six octave-band frequencies from 125 Hz to 4,000 Hz.
+### Inputs and Outputs
 
-All sound levels are simulated rather than measured, and the venue geometry and acoustic parameters include modelling assumptions.
+Both venue models use `load_sound_map()` to return:
 
-## Data Preparation
+- `sound_maps` — simulated sound levels across the venue.
+- `x`, `y` — coordinates of the sound map grid.
+- `allowed_mask` — locations where microphones can be placed.
 
-`extract_sound.py` provides functions to prepare simulated sound maps for interpolation.
+`extract_sound_venues.py` takes these outputs, along with the chosen microphone counts and layouts.
 
-`prepare_interpolation_data()` generates phone positions and extracts their sound measurements for different configurations.
+Supported microphone counts: **10, 30, 50, 100, 250**
 
-Supported phone layouts:
+Supported layouts: **Random, Grid, Clustered**
 
-- Random
-- Grid
-- Clustered
+The prepared data contains:
 
-Supported microphone counts:
+- `phone_positions` — microphone coordinates.
+- `phone_levels` — sound measurements at each microphone.
+- `query_positions` — locations where sound levels should be interpolated.
+- `true_levels` — original simulated sound levels for evaluating interpolation accuracy.
 
-- 10
-- 30
-- 50
-- 100
-- 250
+### How the Files Work Together
 
-The number and arrangement of phones can be varied to investigate how measurement density and spatial distribution affect interpolation accuracy.
+1. Select either `concert_map.py` or `stadium_map.py`.
+2. Generate the simulated sound map using `load_sound_map()`.
+3. Use `extract_sound_venues.py` to place microphones and extract measurements.
+4. Use `visualise_microphone_configurations.py` to inspect the different microphone layouts.
+5. Use `test_input_for_interpolate_venue.py` to obtain the inputs required by an interpolation model.
+6. Compare the interpolated predictions against the original simulated sound map.
 
-For the concert venue, microphone positions are restricted to the audience-accessible area.
+## Basic Sound Map Files
 
-## Example Workflow
+The `Basic_Sound_Map_Files` folder contains earlier, simpler sound simulation models:
 
-`test_input_for_interpolate.py` demonstrates how to load a sound map and prepare data for interpolation.
+- `point_source.py` — single stationary sound source.
+- `multiple_point_sources.py` — multiple stationary sound sources.
+- `single_moving_point_source.py` — moving sound source.
+- `distributed_background_noise.py` — distributed background noise.
+- `extract_sound.py` — data extraction for the earlier simulations.
 
-The workflow is:
+These files were used during initial development and are separate from the current venue simulation pipeline.
 
-1. Select a sound map model.
-2. Load the sound map, grid coordinates and any spatial restrictions.
-3. Generate microphone positions using the selected count and layout.
-4. Extract simulated sound measurements at microphone positions.
-5. Obtain the true sound levels across the grid for comparison.
-6. Pass the prepared data to an interpolation method.
-7. Compare interpolated predictions against the simulated ground truth.
+## Interpolation Models
 
-### Visualisation
+The repository also contains separate interpolation implementations and testing files:
 
-The scripts support visualising:
+- `Ordinary_Kriging_Model.py` — ordinary kriging interpolation.
+- `gp_kernel_and_predict.py` — Gaussian process prediction.
+- `diffusion_lms_model.py` — diffusion LMS modelling.
+- IDW.
 
-- Simulated sound-level heat maps.
-- Microphone positions overlaid on sound maps.
-- Different microphone counts and spatial layouts.
-- Concert venue geometry, including speakers, stage and wall treatments.
-- Treated and untreated concert venue sound fields.
+The aim is to use the microphone measurements generated by `Working_final_maps` to reconstruct the sound field and compare interpolation performance.
 
-## Future Work
+## Next Steps
 
-- Implement and compare four interpolation models, including Kriging and Gaussian process regression.
-- Evaluate interpolation accuracy across different microphone counts and layouts.
-- Investigate prediction uncertainty and its relationship to microphone placement.
-- Compare interpolation performance across different simulated sound environments.
-- Extend the simulations to stadiums and racetracks.
-- Assess the potential for reconstructing realistic sound maps from distributed smartphone measurements.
+- Create final racetrack sound map.
+- Connect the prepared venue data to the interpolation models.
+- Compare prediction accuracy across microphone counts and layouts.
+- Evaluate interpolation uncertainty where supported.
+- Compare performance between concert and stadium environments.
+- Investigate the suitability of these methods for real smartphone sound measurements.

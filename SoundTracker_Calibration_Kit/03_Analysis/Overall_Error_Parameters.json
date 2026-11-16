@@ -1,0 +1,11 @@
+{
+  "valid_recordings_M": 180,
+  "overall_bias_mu_db": -2.5914,
+  "pooled_variance_sigma2_db2": 3.5624,
+  "pooled_sd_sigma_db": 1.8874,
+  "pure_repeatability_variance_db2": 0.165,
+  "pure_repeatability_sd_db": 0.4062,
+  "shapiro_wilk_W": 0.9058,
+  "shapiro_wilk_p": 0.0,
+  "recommended_random_seed": 42
+}

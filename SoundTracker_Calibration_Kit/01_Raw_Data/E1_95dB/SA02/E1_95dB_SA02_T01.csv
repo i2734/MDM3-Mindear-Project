@@ -1,0 +1,18 @@
+recorded_at,event_id,contributor_bucket,lat,lon,accuracy_m,laeq_db,lamax_db,integration_seconds,calibration_offset_db,uploaded,invite,phone_model,device_class,consent_version
+2026-11-10T10:00:01.000Z,calib-e1_95db,phone-sa02ee,51.4545,-2.5879,5.0,120.0,124.2,1,0,True,lab01,Galaxy S23,samsung-s23,phase3-draft-1
+2026-11-10T10:00:02.000Z,calib-e1_95db,phone-sa02ee,51.4545,-2.5879,5.0,93.34,97.54,1,0,True,lab01,Galaxy S23,samsung-s23,phase3-draft-1
+2026-11-10T10:00:03.000Z,calib-e1_95db,phone-sa02ee,51.4545,-2.5879,5.0,93.22,97.42,1,0,True,lab01,Galaxy S23,samsung-s23,phase3-draft-1
+2026-11-10T10:00:04.000Z,calib-e1_95db,phone-sa02ee,51.4545,-2.5879,5.0,93.97,98.17,1,0,True,lab01,Galaxy S23,samsung-s23,phase3-draft-1
+2026-11-10T10:00:05.000Z,calib-e1_95db,phone-sa02ee,51.4545,-2.5879,5.0,93.24,97.44,1,0,True,lab01,Galaxy S23,samsung-s23,phase3-draft-1
+2026-11-10T10:00:06.000Z,calib-e1_95db,phone-sa02ee,51.4545,-2.5879,5.0,93.89,98.09,1,0,True,lab01,Galaxy S23,samsung-s23,phase3-draft-1
+2026-11-10T10:00:07.000Z,calib-e1_95db,phone-sa02ee,51.4545,-2.5879,5.0,93.21,97.41,1,0,True,lab01,Galaxy S23,samsung-s23,phase3-draft-1
+2026-11-10T10:00:08.000Z,calib-e1_95db,phone-sa02ee,51.4545,-2.5879,5.0,94.09,98.29,1,0,True,lab01,Galaxy S23,samsung-s23,phase3-draft-1
+2026-11-10T10:00:09.000Z,calib-e1_95db,phone-sa02ee,51.4545,-2.5879,5.0,93.91,98.11,1,0,True,lab01,Galaxy S23,samsung-s23,phase3-draft-1
+2026-11-10T10:00:10.000Z,calib-e1_95db,phone-sa02ee,51.4545,-2.5879,5.0,93.61,97.81,1,0,True,lab01,Galaxy S23,samsung-s23,phase3-draft-1
+2026-11-10T10:00:11.000Z,calib-e1_95db,phone-sa02ee,51.4545,-2.5879,5.0,94.36,98.56,1,0,True,lab01,Galaxy S23,samsung-s23,phase3-draft-1
+2026-11-10T10:00:12.000Z,calib-e1_95db,phone-sa02ee,51.4545,-2.5879,5.0,94.0,98.2,1,0,True,lab01,Galaxy S23,samsung-s23,phase3-draft-1
+2026-11-10T10:00:13.000Z,calib-e1_95db,phone-sa02ee,51.4545,-2.5879,5.0,94.16,98.36,1,0,True,lab01,Galaxy S23,samsung-s23,phase3-draft-1
+2026-11-10T10:00:14.000Z,calib-e1_95db,phone-sa02ee,51.4545,-2.5879,5.0,93.52,97.72,1,0,True,lab01,Galaxy S23,samsung-s23,phase3-draft-1
+2026-11-10T10:00:15.000Z,calib-e1_95db,phone-sa02ee,51.4545,-2.5879,5.0,94.07,98.27,1,0,True,lab01,Galaxy S23,samsung-s23,phase3-draft-1
+2026-11-10T10:00:16.000Z,calib-e1_95db,phone-sa02ee,51.4545,-2.5879,5.0,93.54,97.74,1,0,True,lab01,Galaxy S23,samsung-s23,phase3-draft-1
+2026-11-10T10:00:17.000Z,calib-e1_95db,phone-sa02ee,51.4545,-2.5879,5.0,94.77,98.97,1,0,True,lab01,Galaxy S23,samsung-s23,phase3-draft-1

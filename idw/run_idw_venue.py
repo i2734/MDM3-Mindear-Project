@@ -7,7 +7,7 @@ import os
 import sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-sys.path.insert(0, os.path.join(HERE, "..", "Working_final_maps"))
+sys.path.insert(0, os.path.join(HERE, "..", "Working_Final_Maps_and_Files"))
 OUT_DIR = HERE                                  # saving figures next to this script
 
 import matplotlib

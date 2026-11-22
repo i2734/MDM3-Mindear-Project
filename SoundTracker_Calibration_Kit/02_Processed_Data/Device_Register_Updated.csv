@@ -1,7 +1,7 @@
-Phone ID,Phone type,Actual model (fill in),Detected_Phone_Model,Contributor_Bucket,Device_Class
-IP01,Apple,,iPhone 13,phone-ip01aa,iphone-13
-IP02,Apple,,iPhone 14,phone-ip02bb,iphone-14
-IP03,Apple,,iPhone 15,phone-ip03cc,iphone-15
-SA01,Samsung,,Galaxy S22,phone-sa01dd,samsung-s22
-SA02,Samsung,,Galaxy S23,phone-sa02ee,samsung-s23
-SA03,Samsung,,Galaxy A54,phone-sa03ff,samsung-a54
+Phone ID,Phone type,Actual model (fill in),Detected_Phone_Model,Contributor_Bucket,Device_Class,Browser,OS,Mic_AGC,Mic_Noise_Suppression,Mic_Echo_Cancellation
+IP01,Apple,,iPhone 16,phone-vwa9rv,iphone-16,Chrome,iOS,,,False
+IP02,Apple,,iPhone 17 Pro Max,phone-yhcpqh,unknown,Chrome,iOS,,,False
+IP03,Apple,,iPhone 14 Pro,phone-v9d5sf,iphone-14-pro,Chrome,iOS,,,False
+SA01,Samsung,,S10,phone-q59zh2,unknown,Firefox,Android,False,False,False
+SA02,Samsung,,S23,phone-wm89dr,unknown,Chrome,Android,False,False,False
+IP04,Apple,,iPhone 15 Pro,phone-csmdeb,iphone-15-pro,Chrome,iOS,,,False

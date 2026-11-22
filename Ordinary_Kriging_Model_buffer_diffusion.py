@@ -10,7 +10,7 @@ class ExactAcousticKriging:
     This model assumes that the inserted sound map is an outside in an open space with no obstacles or reflections, and that the sound field is smooth and continuous.
     Calculation is performed in the linear energy domain to avoid bias from dB averaging.
     """
-    def __init__(self, practical_range=None, sill=1.0, range_ratio=0.25, safety_margin_db=0.0, peak_boost=False):
+    def __init__(self, practical_range=None, sill=1.0, range_ratio=0.25, safety_margin_db=0.0, peak_boost=False, domain="energy"):
         """
         Inputs:
             sill: the variance between points (in linear energy units)
@@ -31,6 +31,7 @@ class ExactAcousticKriging:
         self.range_ratio = range_ratio
         self.safety_margin_db = float(safety_margin_db)
         self.peak_boost = peak_boost
+        self.domain = domain
 
     def _variogram(self, h, eff_range):
         """
@@ -67,8 +68,11 @@ class ExactAcousticKriging:
             eff_range = self.practical_range
 
 
-        #Transform known dB levels to linear energy domain as to avoid bias from dB averaging
-        linear_energy = 10.0 ** (phone_levels / 10.0)  # (T, N)
+        #Work in linear energy (domain="energy") or directly in dB (domain="db")
+        if self.domain == "energy":
+            values = 10.0 ** (phone_levels / 10.0)  # (T, N)
+        else:
+            values = phone_levels                   # (T, N), stay in dB
 
         #Calculate the Euclidean distance matrix between all known phone positions and then apply the variogram function to compute the covariance matrix
         D_known = distance_matrix(phone_positions, phone_positions)
@@ -94,12 +98,14 @@ class ExactAcousticKriging:
         W_aug = np.linalg.solve(A_aug, B_aug)
         weights = W_aug[:N, :]  #Remove the last row corresponding to the Lagrange multiplier, leaving only the weights for the known points
 
-        #Compute the predicted linear energy at each query point by taking the dot product of the known linear energy and the weights
-        pred_energy = np.dot(linear_energy, weights)
-        pred_energy = np.maximum(pred_energy, 1e-12) #Clamp any negative or near-zero predicted energy values to avoid issues with logarithmic conversion
+        #Weighted sum of the phone values gives the prediction at each query point
+        pred = np.dot(values, weights)
 
-        #Convert back to dB and return the predicted sound levels at each query point for all time steps
-        base_db = 10.0 * np.log10(pred_energy)
+        #Convert back to dB if working in energy
+        if self.domain == "energy":
+            base_db = 10.0 * np.log10(np.maximum(pred, 1e-12))
+        else:
+            base_db = pred
 
         #Apply Peak Headroom Boost if enabled (for point sources)
         if self.peak_boost:

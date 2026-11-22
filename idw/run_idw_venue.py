@@ -15,9 +15,9 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import numpy as np
 
-import concert_map
-import stadium_map
-from extract_sound_venues import prepare_interpolation_data
+import final_concert_map as concert_map
+import final_stadium_map as stadium_map
+from bias_and_variance_extract_sound_venues import prepare_interpolation_data
 from idw_model import idw, choose_p_k
 
 VENUES = {
@@ -68,9 +68,9 @@ for name, venue in VENUES.items():
 
     # Figure: truth, tuned prediction and error for one configuration and time step
     data = prepared[FIGURE_SETUP]
-    pos, lev, q, true, mask = (data["phone_positions"], data["phone_levels"],
-                               data["query_positions"], data["true_levels"],
-                               data["allowed_mask"])
+    pos, lev, q, true = (data["phone_positions"], data["phone_levels"],
+                         data["query_positions"], data["true_levels"])
+    mask = allowed_mask
     p, k = choose_p_k(pos, lev)
     pred = idw(pos, lev, q, p=p, k=k)
 

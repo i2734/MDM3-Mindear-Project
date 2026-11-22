@@ -1,11 +1,11 @@
 {
-  "valid_recordings_M": 180,
-  "overall_bias_mu_db": -12.7829,
-  "pooled_variance_sigma2_db2": 114.0711,
-  "pooled_sd_sigma_db": 10.6804,
-  "pure_repeatability_variance_db2": 0.2341,
-  "pure_repeatability_sd_db": 0.4839,
-  "shapiro_wilk_W": 0.9244,
+  "valid_recordings_M": 210,
+  "overall_bias_mu_db": -12.8096,
+  "pooled_variance_sigma2_db2": 119.495,
+  "pooled_sd_sigma_db": 10.9314,
+  "pure_repeatability_variance_db2": 0.4131,
+  "pure_repeatability_sd_db": 0.6427,
+  "shapiro_wilk_W": 0.9198,
   "shapiro_wilk_p": 0.0,
   "recommended_random_seed": 42
 }

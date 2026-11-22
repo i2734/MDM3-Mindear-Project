@@ -1,7 +1,7 @@
-Phone ID,Phone type,Actual model (fill in),Detected_Phone_Model,Contributor_Bucket,Device_Class,Browser,OS,Mic_AGC,Mic_Noise_Suppression,Mic_Echo_Cancellation
-IP01,Apple,,iPhone 16,phone-vwa9rv,iphone-16,Chrome,iOS,,,False
-IP02,Apple,,iPhone 17 Pro Max,phone-yhcpqh,unknown,Chrome,iOS,,,False
-IP03,Apple,,iPhone 14 Pro,phone-v9d5sf,iphone-14-pro,Chrome,iOS,,,False
-SA01,Samsung,,S10,phone-q59zh2,unknown,Firefox,Android,False,False,False
-SA02,Samsung,,S23,phone-wm89dr,unknown,Chrome,Android,False,False,False
-IP04,Apple,,iPhone 15 Pro,phone-csmdeb,iphone-15-pro,Chrome,iOS,,,False
+Phone ID,Phone type,User / Model,Detected_Phone_Model,Contributor_Bucket,Device_Class,Browser,OS,Mic_AGC,Mic_Noise_Suppression,Mic_Echo_Cancellation
+IP01,iPhone,Andrei,iPhone 16,phone-vwa9rv,iphone-16,Chrome,iOS,,,False
+IP02,iPhone,Austin,iPhone 17 Pro Max,phone-yhcpqh,unknown,Chrome,iOS,,,False
+IP03,iPhone,Cici,iPhone 14 Pro,phone-v9d5sf,iphone-14-pro,Chrome,iOS,,,False
+IP04,Apple,Isabelle,iPhone 15 Pro,phone-csmdeb,iphone-15-pro,Chrome,iOS,,,False
+SA01,Samsung,Charlie (Galaxy S10),S10,phone-q59zh2,unknown,Firefox,Android,False,False,False
+SA02,Samsung,Charlie (Galaxy S23),S23,phone-wm89dr,unknown,Chrome,Android,False,False,False

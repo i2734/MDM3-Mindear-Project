@@ -54,14 +54,17 @@ for name, venue in VENUES.items():
             pos, lev, q, true = (data["phone_positions"], data["phone_levels"],
                                  data["query_positions"], data["true_levels"])
 
-            #errors only measured in the audience area (query_positions = allowed area)
-            base_rmse = rmse(idw(pos, lev, q), true)
-            p, k = choose_p_k(pos, lev)
-            tune_rmse = rmse(idw(pos, lev, q, p=p, k=k), true)
-            
-            print(f"Phones: {count:3d} | Layout: {layout:10s} | "
-                  f"default RMSE: {base_rmse:5.2f} dB | tuned RMSE: {tune_rmse:5.2f} dB "
-                  f"(p={p:g}, k={'all' if k is None else k})")
+            # errors only measured at audience points with no phone on them
+            ev = data["evaluation_mask"]
+            for domain in ["energy", "db"]:
+                p, k = choose_p_k(pos, lev, domain=domain)
+                pred = idw(pos, lev, q, p=p, k=k, domain=domain)
+                err = pred[:, ev] - true[:, ev]
+                print(f"Phones: {count:3d} | Layout: {layout:10s} | {domain:6s} | "
+                      f"RMSE: {np.sqrt(np.mean(err**2)):5.2f} dB | "
+                      f"bias: {err.mean():+5.2f} dB | "
+                      f"worst under: {-err.min():5.2f} dB "
+                      f"(p={p:g}, k={'all' if k is None else k})")
 
     # Figure: truth, tuned prediction and error for one configuration and time step
     data = prepared[FIGURE_SETUP]

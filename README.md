@@ -1,6 +1,6 @@
 # MDM3-Mindear-Project
 
-Sound-field reconstruction for the MindEar SoundTracker app: simulated venue sound maps are sampled by virtual "phones", and four interpolation models are compared on how well they rebuild the full map from those readings.
+Sound field reconstruction for the MindEar SoundTracker app: simulated venue sound maps are sampled by virtual "phones", and four interpolation models are compared on how well they rebuild the full map from those readings.
 
 ## Repository structure
 
@@ -83,10 +83,3 @@ Notebooks can be opened from anywhere inside the repo. Scripts save their figure
 
 - `gp_working_final_f1.ipynb`, `gp_working_final_maps_concert.ipynb` and `gp_working_final_stadium.ipynb` import `gp_working_final_*.py` scripts that are not in the repo, so they only show saved outputs and cannot be re-run yet.
 - Cell 19 of `Ordinary_Kriging_Model_Test_Runs.ipynb` imports `Ordinary_Kriging_Model`, which no longer exists; it needs pointing at one of the three kriging files.
-
-## Next steps
-
-- Compare prediction accuracy across microphone counts and layouts.
-- Evaluate interpolation uncertainty where supported.
-- Compare performance between concert, stadium and F1 environments.
-- Investigate the suitability of these methods for real smartphone sound measurements.

@@ -3,6 +3,40 @@
 import numpy as np
 
 
+# Phone measurement error added to the simulated readings (phone_error argument below).
+#   perfect     - no error: phones read the true level
+#   real_phones - each simulated phone gets one fixed offset, picked at random from the
+#                 mean errors of the six phones in the calibration experiment
+#                 (calibration/SoundTracker_Calibration_Kit/03_Analysis/Summary_By_Phone.csv:
+#                 IP01-IP04, SA01, SA02), plus random noise of SD 3.2 dB on every reading
+#                 (the average per-phone SD in the same file)
+#   legacy      - the earlier setting: every reading -2.5914 dB plus noise of SD 1.8874 dB
+PHONE_ERROR = {
+    "perfect": None,
+    "real_phones": {"phone_offsets_db": [-13.93, -9.92, -11.05, -12.57, -32.44, 3.05],
+                    "noise_sd_db": 3.2},
+    "legacy": {"phone_offsets_db": [-2.5914], "noise_sd_db": 1.8874},
+}
+
+
+def add_phone_error(measured, rng, error):
+    """Add measurement error to the true levels at the phones, measured shape (T, N).
+
+    Each phone gets a fixed offset (the same at every time step) plus random noise
+    that changes every reading.
+    """
+    if error is None:
+        return measured
+    T, N = measured.shape
+    choices = error["phone_offsets_db"]
+    if len(choices) == 1:
+        offsets = np.full(N, choices[0])                          # same offset for every phone
+    else:
+        offsets = rng.choice(choices, size=N)                     # one fixed offset per phone
+    noise = rng.normal(0.0, error["noise_sd_db"], size=(T, N))    # new noise every reading
+    return measured + offsets[None, :] + noise
+
+
 def _validate(x, y, allowed_mask):
     """Find the grid coordinates where phones are allowed to be placed."""
     x = np.asarray(x, dtype=float)
@@ -136,8 +170,12 @@ def extract_measurements(sound_maps, x, y, phone_positions, allowed_mask=None):
     return maps[:, iy, ix]
 
 
-def prepare_interpolation_data(sound_maps, x, y, phone_counts, layouts, seed=42, allowed_mask=None):   
-    """Build phone measurements and full-map true values for each layout and phone count."""
+def prepare_interpolation_data(sound_maps, x, y, phone_counts, layouts, seed=42, allowed_mask=None,
+                               phone_error="real_phones"):   
+    """Build phone measurements and full-map true values for each layout and phone count.
+
+    phone_error: "perfect", "real_phones" or "legacy" (see PHONE_ERROR at the top).
+    """
     x, y, mask, _ = _validate(x, y, allowed_mask)    
     maps = np.asarray(sound_maps, dtype=float)
 
@@ -160,8 +198,8 @@ def prepare_interpolation_data(sound_maps, x, y, phone_counts, layouts, seed=42,
             measured = extract_measurements(maps, x, y, positions, mask)
 
             rng = np.random.default_rng(seed + n + sum(map(ord, layout)))
-            #adding bias and variance
-            measured = measured - 2.5914 + rng.normal(loc=0,scale=1.8874,size=measured.shape)
+            # add phone measurement error (see PHONE_ERROR at the top)
+            measured = add_phone_error(measured, rng, PHONE_ERROR[phone_error])
             # Find the grid indices occupied by microphones
             ix = np.abs(x[None, :] - positions[:, 0, None]).argmin(axis=1)
             iy = np.abs(y[None, :] - positions[:, 1, None]).argmin(axis=1)

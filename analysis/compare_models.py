@@ -4,26 +4,36 @@ Every model gets exactly the same phone positions, phone readings and time frame
 Results are written to one CSV (one row per model/venue/phone count/layout/seed) so every table and figure in the report can be made from the same file.
 
 Run from the repo root, for example:
-    python3 analysis/compare_models.py                       # perfect phone readings
-    python3 analysis/compare_models.py --readings noisy      # readings with phone error
+    python3 analysis/compare_models.py                            # perfect phone readings
+    python3 analysis/compare_models.py --readings real_phones     # readings with phone error
     python3 analysis/compare_models.py --venues concert --seeds 0 --models idw kriging
 
-Phone readings:
-    perfect  - true levels at the phones (sound_maps/venues/final_extract_sound_venues.py)
-    noisy    - readings with simulated phone error
-               (sound_maps/venues/bias_and_variance_extract_sound_venues.py)
+Phone readings (PHONE_ERROR in sound_maps/venues/bias_and_variance_extract_sound_venues.py):
+    perfect     - true levels at the phones
+    real_phones - each phone has a fixed offset taken from the calibration experiment,
+                  plus 3.2 dB random noise on every reading
+    legacy      - the earlier setting (-2.5914 dB on every reading, 1.8874 dB noise)
 
 Models (settings as used in the group's own testing):
-    idw       - models/idw/idw_model.py, p and k tuned by leave one out on the phones
-    kriging   - models/kriging/Ordinary_Kriging_Model_no_buffer.py (no safety buffer)
+    idw       - models/idw/idw_model.py, p and k tuned by leave one out on the phones,
+                averaging readings as energy
+    idw_db    - same, averaging readings in dB
+    kriging   - models/kriging/Ordinary_Kriging_Model_no_buffer.py (no safety buffer),
+                averaging readings as energy
+    kriging_db - same kriging in dB (Ordinary_Kriging_Model_buffer_diffusion.py with
+                domain="db" and no safety margin or peak boost)
     gp        - models/gaussian_process/gp_all_model.py, fixed RBF kernel (15 m length scale)
-    gp_tuned  - same GP, length scale chosen by leave one out on the phones
+    gp_tuned  - same GP, length scale and noise level chosen by leave one out on the phones
+                (models/gaussian_process/gp_tuned.py)
                 (the tuned GP from the gp_working_final notebooks is not in the repo)
+    ensemble  - models/ensemble/stacked_ensemble.py: weighted blend of gp_tuned, idw_db and
+                diffusion, weights learnt by 5-fold cross-validation on the phones
     diffusion - models/diffusion_lms/diffusion_lms_model.py, settings from
                 diffusion_fianl_testing.ipynb
 """
 
 import argparse
+import functools
 import csv
 import importlib
 import sys
@@ -34,7 +44,7 @@ import numpy as np
 
 ROOT = Path(__file__).resolve().parents[1]
 for folder in ("sound_maps/venues", "models/idw", "models/kriging",
-               "models/gaussian_process", "models/diffusion_lms"):
+               "models/gaussian_process", "models/diffusion_lms", "models/ensemble"):
     sys.path.insert(0, str(ROOT / folder))
 
 VENUES = {                       # venue -> (sound map module, frame stride)
@@ -44,8 +54,8 @@ VENUES = {                       # venue -> (sound map module, frame stride)
 }
 PHONE_COUNTS = [10, 30, 50, 100, 250]
 LAYOUTS = ["random", "grid", "clustered"]
-READINGS = {"perfect": "final_extract_sound_venues",
-            "noisy": "bias_and_variance_extract_sound_venues"}
+READINGS = ["perfect", "real_phones", "legacy"]   # phone_error settings
+DEFAULT_MODELS = ["idw", "idw_db", "kriging", "kriging_db", "gp_tuned", "diffusion", "ensemble"]
 
 DIFF_SETTINGS = dict(n_basis=100, basis_width_ratio=0.08, learning_rate=0.15,
                         n_iterations=900, communication_radius=None,
@@ -53,15 +63,25 @@ DIFF_SETTINGS = dict(n_basis=100, basis_width_ratio=0.08, learning_rate=0.15,
 
 
 # ---------------------------------------------------------------- models
-def run_idw(pos, lev, q):
+def run_idw(pos, lev, q, domain="energy"):
     from idw_model import idw, choose_p_k
-    p, k = choose_p_k(pos, lev)
-    return idw(pos, lev, q, p=p, k=k), f"p={p:g},k={'all' if k is None else k}"
+    p, k = choose_p_k(pos, lev, domain=domain)
+    return idw(pos, lev, q, p=p, k=k, domain=domain), f"p={p:g},k={'all' if k is None else k}"
+
+
+def run_idw_db(pos, lev, q):
+    return run_idw(pos, lev, q, domain="db")
 
 
 def run_kriging(pos, lev, q):
     from Ordinary_Kriging_Model_no_buffer import ExactAcousticKriging
     return ExactAcousticKriging().fit_predict(pos, lev, q), ""
+
+
+def run_kriging_db(pos, lev, q):
+    from Ordinary_Kriging_Model_buffer_diffusion import ExactAcousticKriging
+    model = ExactAcousticKriging(safety_margin_db=0.0, peak_boost=False, domain="db")
+    return model.fit_predict(pos, lev, q), ""
 
 
 def run_gp(pos, lev, q):
@@ -70,30 +90,9 @@ def run_gp(pos, lev, q):
 
 
 def run_gp_tuned(pos, lev, q):
-    """Same GP, but the length scale is chosen by leave-one-out on the phones only
-    (like IDW's p and k), from a range scaled to the size of the venue."""
-    import gp_all_model as gp
-    domain = np.vstack((pos, q))
-    diagonal = np.linalg.norm(domain.max(axis=0) - domain.min(axis=0))
-    candidates = diagonal * np.array([0.01, 0.02, 0.05, 0.1, 0.2, 0.4])
-    centred = (lev - lev.mean(axis=1, keepdims=True)).T          # (N, T)
-    original = gp.LENGTH_SCALE_M
-    best, best_err = original, np.inf
-    try:
-        for ell in candidates:
-            gp.LENGTH_SCALE_M = ell
-            K = gp.rbf_kernel(pos, pos) + (gp.NOISE_STD_DB**2 + gp.JITTER) * np.eye(len(pos))
-            K_inv = np.linalg.inv(K)
-            # closed-form leave-one-out residuals for every phone and frame
-            loo = (K_inv @ centred) / np.diag(K_inv)[:, None]
-            err = np.mean(loo**2)
-            if err < best_err:
-                best, best_err = ell, err
-        gp.LENGTH_SCALE_M = best
-        pred = gp.predict_gp(pos, lev, q)
-    finally:
-        gp.LENGTH_SCALE_M = original
-    return pred, f"length_scale={best:.1f}m"
+    from gp_tuned import predict_gp_tuned
+    pred, (ell, noise) = predict_gp_tuned(pos, lev, q)
+    return pred, f"length_scale={ell:.1f}m,noise={noise:g}dB"
 
 
 def run_diffusion(pos, lev, q):
@@ -101,8 +100,16 @@ def run_diffusion(pos, lev, q):
     return DiffusionAcousticLMS(**DIFF_SETTINGS).fit_predict(pos, lev, q), ""
 
 
-MODELS = {"idw": run_idw, "kriging": run_kriging, "gp": run_gp, "gp_tuned": run_gp_tuned,
-          "diffusion": run_diffusion}
+def run_ensemble(pos, lev, q):
+    from stacked_ensemble import StackedEnsemble
+    model = StackedEnsemble()
+    pred = model.fit_predict(pos, lev, q)
+    return pred, ",".join(f"w_{k}={v:g}" for k, v in model.weights_.items())
+
+
+MODELS = {"idw": run_idw, "idw_db": run_idw_db, "kriging": run_kriging,
+          "kriging_db": run_kriging_db, "gp": run_gp, "gp_tuned": run_gp_tuned,
+          "diffusion": run_diffusion, "ensemble": run_ensemble}
 
 
 # ---------------------------------------------------------------- scoring
@@ -129,17 +136,18 @@ def main():
                                  formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--readings", choices=READINGS, default="perfect")
     ap.add_argument("--venues", nargs="+", choices=VENUES, default=list(VENUES))
-    ap.add_argument("--models", nargs="+", choices=MODELS, default=list(MODELS))
+    ap.add_argument("--models", nargs="+", choices=MODELS, default=DEFAULT_MODELS)
     ap.add_argument("--counts", nargs="+", type=int, default=PHONE_COUNTS)
     ap.add_argument("--layouts", nargs="+", choices=LAYOUTS, default=LAYOUTS)
     ap.add_argument("--seeds", nargs="+", type=int, default=[0, 1, 2, 3, 4],
-                    help="grid layouts don't depend on the seed, so only the first seed is used for grid")
+                    help="with perfect readings grid layouts don't depend on the seed, so only the first seed is used for grid")
     ap.add_argument("--out", type=Path, default=None)
     args = ap.parse_args()
 
     out = args.out or ROOT / "analysis" / "results" / f"model_comparison_{args.readings}.csv"
     out.parent.mkdir(parents=True, exist_ok=True)
-    prepare = importlib.import_module(READINGS[args.readings]).prepare_interpolation_data
+    module = importlib.import_module("bias_and_variance_extract_sound_venues")
+    prepare = functools.partial(module.prepare_interpolation_data, phone_error=args.readings)
 
     # resume: skip rows already in the output file
     done = set()
@@ -163,7 +171,10 @@ def main():
                 maps = maps[None]
             maps = maps[::stride]
             for seed in args.seeds:
-                layouts = [l for l in args.layouts if l != "grid" or seed == args.seeds[0]]
+                # with perfect readings a grid layout has nothing random in it, so it only
+                # needs one seed; with phone error the offsets and noise change per seed
+                layouts = [l for l in args.layouts
+                           if l != "grid" or seed == args.seeds[0] or args.readings != "perfect"]
                 if not layouts:
                     continue
                 data = prepare(maps, x, y, args.counts, layouts, seed=seed, allowed_mask=mask)

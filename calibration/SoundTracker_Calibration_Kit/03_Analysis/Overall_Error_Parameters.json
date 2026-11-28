@@ -5,7 +5,5 @@
   "pooled_sd_sigma_db": 10.9314,
   "pure_repeatability_variance_db2": 0.4131,
   "pure_repeatability_sd_db": 0.6427,
-  "shapiro_wilk_W": 0.9198,
-  "shapiro_wilk_p": 0.0,
   "recommended_random_seed": 42
 }
